@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    tools:context=".activity_sintomas">
+    tools:context=".activity_perfil_editar" >
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="601dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,7 +18,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="8px"
                 android:layout_marginBottom="8px">
 
@@ -26,21 +26,19 @@
                     android:id="@+id/editTextDataNascimentoEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores de cabeça"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:hint="Data de Nascimento" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_height="match_parent"
+                android:layout_marginTop="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDoresMusculares"
+                    android:id="@+id/editTextSexoEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores Musculares" />
+                    android:hint="Sexo" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -50,10 +48,21 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCansaco"
+                    android:id="@+id/editTextAlturaEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Cansaço" />
+                    android:hint="Altura" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPesoEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Peso" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -63,66 +72,14 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDorGarganta"
+                    android:id="@+id/editTextTipoSangue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dor de garganta" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextTosse"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Tosse" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextTemperatura"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Temperatura" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextRespiracao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Respiração" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCorrNasal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Corrimento Nasal" />
+                    android:hint="Tipo de Sangue" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/buttonConfirmarSintoma"
+                android:id="@+id/buttonEditarPerfilConfirmar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8px"
@@ -132,12 +89,14 @@
                 android:textColor="@color/colorPrimaryDark" />
 
             <Button
-                android:id="@+id/buttonCancelarSintoma"
+                android:id="@+id/buttonEditarPerfilCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8px"
                 android:background="@drawable/cor_botoes"
                 android:text="Cancelar"
                 android:textColor="@color/colorPrimaryDark" />
+
         </LinearLayout>
     </ScrollView>
 
