@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_sus_inf_editar"></activity>
+        <activity android:name=".activity_sintomas_editar"></activity>
+        <activity android:name=".activity_sus_inf_editar" />
         <activity android:name=".activity_perfil_editar" />
-        <activity android:name=".activity_sus_inf" />
-        <activity android:name=".activity_sintomas" />
+        <activity android:name=".activity_sus_inf_adicionar" />
+        <activity android:name=".activity_sintomas_adicionar" />
         <activity android:name=".activity_perfil" />
         <activity
             android:name=".MainActivity"

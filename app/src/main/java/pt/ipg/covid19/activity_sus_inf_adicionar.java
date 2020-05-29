@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class activity_sintomas extends AppCompatActivity {
+public class activity_sus_inf_adicionar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sintomas);
+        setContentView(R.layout.activity_sus_inf_adicionar);
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    tools:context=".activity_sintomas">
+    tools:context=".activity_sintomas_adicionar">
 
     <ScrollView
         android:layout_width="409dp"
@@ -18,16 +18,13 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDataNascimentoEditar"
+                    android:id="@+id/editTextDoresCabecaAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores de cabeça"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:hint="Dores de Cabeça" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -37,7 +34,7 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDoresMusculares"
+                    android:id="@+id/editTextDoresMuscularesAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Dores Musculares" />
@@ -50,7 +47,7 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCansaco"
+                    android:id="@+id/editTextCansacoAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Cansaço" />
@@ -63,7 +60,7 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDorGarganta"
+                    android:id="@+id/editTextDorGargantaAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Dor de garganta" />
@@ -76,7 +73,7 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextTosse"
+                    android:id="@+id/editTextTosseAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Tosse" />
@@ -89,7 +86,7 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextTemperatura"
+                    android:id="@+id/editTextTemperaturaAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Temperatura" />
@@ -102,7 +99,7 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextRespiracao"
+                    android:id="@+id/editTextRespiracaoAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Respiração" />
@@ -115,14 +112,14 @@
                 android:layout_marginBottom="8px">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCorrNasal"
+                    android:id="@+id/editTextCorrNasalAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Corrimento Nasal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/buttonConfirmarSintoma"
+                android:id="@+id/buttonConfirmarSintomaAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8px"
@@ -132,7 +129,7 @@
                 android:textColor="@color/colorPrimaryDark" />
 
             <Button
-                android:id="@+id/buttonCancelarSintoma"
+                android:id="@+id/buttonCancelarSintomaAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cor_botoes"
