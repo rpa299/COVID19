@@ -1,5 +1,6 @@
 package pt.ipg.covid19;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -42,5 +43,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClickPerfil(View view){
+        Intent IntentPerfil = new Intent(this, activity_perfil.class);
+        startActivity(IntentPerfil);
+    }
+
+    public void onClickSus(View view){
+        Intent IntentSus = new Intent(this, activity_sus_inf.class);
+        startActivity(IntentSus);
+    }
+
+    public void onClickSintomas(View view){
+        Intent IntentSintomas = new Intent(this, activity_sintomas.class);
+        startActivity(IntentSintomas);
     }
 }
