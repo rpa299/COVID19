@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".activity_sintomas">
 
     <ScrollView
@@ -25,7 +26,8 @@
                     android:id="@+id/editTextDoresCabeca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores de cabeça" />
+                    android:hint="Dores de cabeça"
+                    android:textColor="@color/colorPrimaryDark" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
