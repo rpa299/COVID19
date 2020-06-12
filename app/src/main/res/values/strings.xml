@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">COVID19</string>
+    <string name="app_name" translatable="false">COVID19</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -7,31 +7,31 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="perfil">Perfil</string>
-    <string name="suspeitos_ou_infetados">Suspeitos ou Infetados</string>
-    <string name="sintomas">Sintomas</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="perfil">Profile</string>
+    <string name="suspeitos_ou_infetados">Suspects or infected</string>
+    <string name="sintomas">Sintoms</string>
     <string name="coronavirusimage">CoronaVirusimage</string>
-    <string name="idade">Idade</string>
-    <string name="periodo">Periodo</string>
-    <string name="confirmar">Confirmar</string>
-    <string name="nome">Nome</string>
-    <string name="cancelar">Cancelar</string>
-    <string name="guardar">Guardar</string>
-    <string name="dores_de_cabeca">Dores de Cabeça</string>
-    <string name="dores_musculares">Dores Musculares</string>
-    <string name="cansaco">Cansaço</string>
-    <string name="dores_de_garganta">Dores de garganta</string>
-    <string name="tosse">Tosse</string>
-    <string name="temperatura">Temperatura</string>
-    <string name="respiracao">Respiração</string>
-    <string name="corrimento_nasal">Corrimento Nasal</string>
-    <string name="sexo">Sexo</string>
-    <string name="altura">Altura</string>
-    <string name="peso">Peso</string>
-    <string name="tipo_de_sangue">Tipo de Sangue</string>
-    <string name="data_de_nascimento">Data de Nascimento</string>
-    <string name="apagar">Apagar</string>
-    <string name="editar">Editar</string>
+    <string name="idade">Age</string>
+    <string name="periodo">Period</string>
+    <string name="confirmar">Confirm</string>
+    <string name="nome">Name</string>
+    <string name="cancelar">Cancel</string>
+    <string name="guardar">Save</string>
+    <string name="dores_de_cabeca">Headache</string>
+    <string name="dores_musculares">Muscle aches</string>
+    <string name="cansaco">Fatigue</string>
+    <string name="dores_de_garganta">Sore throat</string>
+    <string name="tosse">Cough</string>
+    <string name="temperatura">Temperature</string>
+    <string name="respiracao">Respiration</string>
+    <string name="corrimento_nasal">Nasal discharge</string>
+    <string name="sexo">Gender</string>
+    <string name="altura">Height</string>
+    <string name="peso">Weight</string>
+    <string name="tipo_de_sangue">Blood type</string>
+    <string name="data_de_nascimento">Year of birth</string>
+    <string name="apagar">Delete</string>
+    <string name="editar">Edit</string>
 </resources>
