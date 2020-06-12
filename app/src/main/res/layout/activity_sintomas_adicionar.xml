@@ -24,108 +24,101 @@
                     android:id="@+id/editTextDoresCabecaAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores de Cabeça" />
+                    android:hint="@string/dores_de_cabeca" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextDoresMuscularesAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores Musculares" />
+                    android:hint="@string/dores_musculares" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextCansacoAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Cansaço" />
+                    android:hint="@string/cansaco" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextDorGargantaAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dor de garganta" />
+                    android:hint="@string/dores_de_garganta" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextTosseAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tosse" />
+                    android:hint="@string/tosse" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextTemperaturaAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Temperatura" />
+                    android:hint="@string/temperatura" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextRespiracaoAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Respiração" />
+                    android:hint="@string/respiracao" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextCorrNasalAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Corrimento Nasal" />
+                    android:hint="@string/corrimento_nasal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/buttonConfirmarSintomaAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
-                android:text="Confirmar"
+                android:text="@string/confirmar"
                 android:textColor="@color/colorPrimaryDark" />
 
             <Button
@@ -133,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cor_botoes"
-                android:text="Cancelar"
+                android:text="@string/cancelar"
                 android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </ScrollView>
