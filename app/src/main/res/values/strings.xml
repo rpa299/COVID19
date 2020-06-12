@@ -9,4 +9,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="perfil">Perfil</string>
+    <string name="suspeitos_ou_infetados">Suspeitos ou Infetados</string>
+    <string name="sintomas">Sintomas</string>
+    <string name="coronavirusimage">CoronaVirusimage</string>
 </resources>
