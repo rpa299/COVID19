@@ -13,4 +13,9 @@
     <string name="suspeitos_ou_infetados">Suspeitos ou Infetados</string>
     <string name="sintomas">Sintomas</string>
     <string name="coronavirusimage">CoronaVirusimage</string>
+    <string name="idade">Idade</string>
+    <string name="periodo">Periodo</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="nome">Nome</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

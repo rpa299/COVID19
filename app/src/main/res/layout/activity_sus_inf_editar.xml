@@ -20,7 +20,7 @@
             android:id="@+id/editTextIdadeEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Idade" />
+            android:hint="@string/idade" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -36,7 +36,7 @@
             android:id="@+id/editTextPeriodoEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Periodo" />
+            android:hint="@string/periodo" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/cor_botoes"
-        android:text="Confirmar"
+        android:text="@string/confirmar"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -65,7 +65,7 @@
             android:id="@+id/editTextNomeEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome" />
+            android:hint="@string/nome" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/cor_botoes"
-        android:text="Cancelar"
+        android:text="@string/cancelar"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
