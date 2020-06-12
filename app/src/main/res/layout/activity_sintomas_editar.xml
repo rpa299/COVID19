@@ -24,7 +24,7 @@
                     android:id="@+id/editTextDoresCabecaEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores de Cabeça" />
+                    android:hint="@string/dores_de_cabeca" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -35,7 +35,7 @@
                     android:id="@+id/editTextDoresMuscularesEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores Musculares" />
+                    android:hint="@string/dores_musculares" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -46,7 +46,7 @@
                     android:id="@+id/editTextCansacoEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Cansaço" />
+                    android:hint="@string/cansaco" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +57,7 @@
                     android:id="@+id/editTextDorGargantaEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Dores de garganta" />
+                    android:hint="@string/dores_de_garganta" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -68,7 +68,7 @@
                     android:id="@+id/editTextTosseEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tosse" />
+                    android:hint="@string/tosse" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -79,7 +79,7 @@
                     android:id="@+id/editTextTemperatura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Temperatura" />
+                    android:hint="@string/temperatura" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -90,7 +90,7 @@
                     android:id="@+id/editTextRespiracao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Respiração" />
+                    android:hint="@string/respiracao" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -101,7 +101,7 @@
                     android:id="@+id/editTextCorrimentoNasalEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Corrimento Nasal" />
+                    android:hint="@string/corrimento_nasal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -109,8 +109,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cor_botoes"
-                android:text="Confirmar"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:text="@string/confirmar"
+                android:textColor="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/buttonSintomasEditCancelar"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/cor_botoes"
-                android:text="Cancelar"
+                android:text="@string/cancelar"
                 android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </ScrollView>

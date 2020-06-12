@@ -19,4 +19,12 @@
     <string name="nome">Nome</string>
     <string name="cancelar">Cancelar</string>
     <string name="guardar">Guardar</string>
+    <string name="dores_de_cabeca">Dores de Cabeça</string>
+    <string name="dores_musculares">Dores Musculares</string>
+    <string name="cansaco">Cansaço</string>
+    <string name="dores_de_garganta">Dores de garganta</string>
+    <string name="tosse">Tosse</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="respiracao">Respiração</string>
+    <string name="corrimento_nasal">Corrimento Nasal</string>
 </resources>
