@@ -14,5 +14,9 @@ public class activity_perfil_editar extends AppCompatActivity {
         setContentView(R.layout.activity_perfil_editar);
     }
 
+    public void onClickPerfilEditar(View view){
+        Intent IntentPerfilEditar = new Intent(this, activity_perfil_editar.class);
+        startActivity(IntentPerfilEditar);
+    }
 
 }
