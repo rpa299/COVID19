@@ -19,39 +19,37 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextDataNascimentoEdit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Data de Nascimento" />
+                    android:hint="@string/data_de_nascimento" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextSexoEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Sexo" />
+                    android:hint="@string/sexo" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextAlturaEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Altura" />
+                    android:hint="@string/altura" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -62,39 +60,38 @@
                     android:id="@+id/editTextPesoEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Peso" />
+                    android:hint="@string/peso" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px">
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextTipoSangue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tipo de Sangue" />
+                    android:hint="@string/tipo_de_sangue" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/buttonEditarPerfilConfirmar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8px"
-                android:layout_marginBottom="8px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
-                android:text="Confirmar"
+                android:text="@string/confirmar"
                 android:textColor="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/buttonEditarPerfilCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8px"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/cor_botoes"
-                android:text="Cancelar"
+                android:text="@string/cancelar"
                 android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
