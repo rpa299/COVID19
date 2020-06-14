@@ -20,7 +20,8 @@
             android:id="@+id/editTextIdadeEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/idade" />
+            android:hint="@string/idade"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -36,7 +37,8 @@
             android:id="@+id/editTextPeriodoEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/periodo" />
+            android:hint="@string/periodo"
+            android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -65,7 +67,8 @@
             android:id="@+id/editTextNomeEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nome" />
+            android:hint="@string/nome"
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
