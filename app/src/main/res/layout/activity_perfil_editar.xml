@@ -16,18 +16,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textViewDataNascimento"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/data_de_nascimento"
+                android:textIsSelectable="false"
+                android:textSize="18sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDataNascimentoEdit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/data_de_nascimento"
-                    android:inputType="date" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/BotaoEscolherData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/cor_botoes"
+                android:onClick="escolherData"
+                android:text="@string/escolherdata"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="Escolher Data" />
 
             <Spinner
                 android:id="@+id/spinnerSexoEditPerfil"
@@ -36,7 +46,8 @@
                 android:layout_marginTop="8dp"
                 android:addStatesFromChildren="false"
                 android:isScrollContainer="false"
-                android:spinnerMode="dropdown" />
+                android:spinnerMode="dropdown"
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -65,13 +76,16 @@
                 android:id="@+id/spinnerTipoSangueEditPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/buttonEditarPerfilConfirmar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
                 android:text="@string/confirmar"
@@ -81,7 +95,9 @@
                 android:id="@+id/buttonEditarPerfilCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
                 android:text="@string/cancelar"
                 android:textColor="@color/colorPrimaryDark" />
