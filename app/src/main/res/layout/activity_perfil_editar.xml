@@ -29,17 +29,14 @@
                     android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
+            <Spinner
+                android:id="@+id/spinnerSexoEditPerfil"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextSexoEditar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/sexo" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:addStatesFromChildren="false"
+                android:isScrollContainer="false"
+                android:spinnerMode="dropdown" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"

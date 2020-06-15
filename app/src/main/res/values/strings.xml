@@ -34,4 +34,9 @@
     <string name="data_de_nascimento">Year of birth</string>
     <string name="apagar">Delete</string>
     <string name="editar">Edit</string>
+    <string-array name="SexoPerfil">
+        <item>---</item>
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
 </resources>
