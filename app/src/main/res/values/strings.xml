@@ -28,7 +28,7 @@
     <string name="respiracao">Respiration</string>
     <string name="corrimento_nasal">Nasal discharge</string>
     <string name="sexo">Gender</string>
-    <string name="altura">Height</string>
+    <string name="altura">Height in cm</string>
     <string name="peso">Weight</string>
     <string name="tipo_de_sangue">Blood type</string>
     <string name="data_de_nascimento">Year of birth</string>
@@ -38,5 +38,16 @@
         <item>---</item>
         <item>Masculino</item>
         <item>Feminino</item>
+    </string-array>
+    <string-array name="SanguePerfil">
+        <item>---</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
     </string-array>
 </resources>

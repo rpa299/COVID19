@@ -21,6 +21,12 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        Spinner spinnerSangue = findViewById(R.id.spinnerTipoSangueEditPerfil);
+        ArrayAdapter<CharSequence> adapterSangue = ArrayAdapter.createFromResource(this,R.array.SanguePerfil,android.R.layout.simple_spinner_item);
+        adapterSangue.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerSangue.setAdapter(adapterSangue);
+        spinnerSangue.setOnItemSelectedListener(this);
     }
 
     public void onClickPerfilEditar(View view){
@@ -30,7 +36,14 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String sexo = parent.getItemAtPosition(position).toString();
+        switch(parent.getId()){
+            case R.id.spinnerSexoEditPerfil:
+                String sexo = parent.getItemAtPosition(position).toString();
+                break;
+            case R.id.spinnerTipoSangueEditPerfil:
+                String sangue = parent.getItemAtPosition(position).toString();
+                break;
+        }
     }
 
     @Override
