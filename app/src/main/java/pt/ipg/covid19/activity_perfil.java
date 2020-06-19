@@ -28,6 +28,10 @@ public class activity_perfil extends AppCompatActivity {
         String altura = intent.getStringExtra("covid19_altura");
         TextView AlturaText = (TextView) findViewById(R.id.textViewAltura);
         AlturaText.setText(altura);
+        //peso
+        String peso = intent.getStringExtra("covid19_peso");
+        TextView PesoText = (TextView) findViewById(R.id.textViewPeso);
+        PesoText.setText(peso);
         //Sangue
         String sangue = intent.getStringExtra("covid19_sangue");
         TextView TipoSangue = (TextView) findViewById(R.id.textViewTipoSangue);
