@@ -169,7 +169,9 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         //envia peso
 
         //envia sangue
-        
+        Spinner spinnerSangue = findViewById(R.id.spinnerTipoSangueEditPerfil);
+        String Sangue = (String) spinnerSangue.getSelectedItem();
+        intent.putExtra("covid19_sangue",Sangue);
         startActivity(intent);
     }
 }
