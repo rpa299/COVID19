@@ -16,9 +16,14 @@ public class activity_perfil extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         Intent intent = getIntent();
-        String data = intent.getStringExtra("covid19");
+        //data Nascimento
+        String data = intent.getStringExtra("covid19_data");
         TextView dataNascimento = (TextView) findViewById(R.id.textViewNascimento);
         dataNascimento.setText(data);
+        //Sexo
+        String sexo = intent.getStringExtra("covid19_sexo");
+        TextView Sexo = (TextView) findViewById(R.id.textViewSexo);
+        Sexo.setText(sexo);
     }
 
     public void onClickEditarPerfil(View view){

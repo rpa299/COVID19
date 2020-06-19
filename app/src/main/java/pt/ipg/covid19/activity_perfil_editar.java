@@ -30,7 +30,8 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
     TextView dataNascimento;
     TextInputEditText editTextAlturaEditar;
     TextInputEditText editTextPesoEditar;
-
+    Spinner spinnerSexo;
+    Spinner spinnerSangue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +58,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
 
     public void GuardarPerfil(View view){
         validarCampos();
-        Intent intent = new Intent(this, activity_perfil.class);
-        String data = dataNascimento.getText().toString();
-
-        intent.putExtra("covid19",data);
-        startActivity(intent);
     }
 
     public void escolherData(View view){
@@ -136,10 +132,12 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         TextInputEditText mensagemAlturaEditar = (TextInputEditText) findViewById(R.id.editTextAlturaEditar);
         TextInputEditText mensagemPesoEditar = (TextInputEditText) findViewById(R.id.editTextPesoEditar);
 
+        //mete os valores em strings
         String data =mensagemDataNascimento.getText().toString();
         String altura = mensagemAlturaEditar.getText().toString();
         String peso = mensagemPesoEditar.getText().toString();
 
+        //validação
         if(data.trim().length() == 0){
             mensagemDataNascimento.setError(getString(R.string.obrigatorio));
             mensagemDataNascimento.requestFocus();
@@ -155,5 +153,23 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
             mensagemPesoEditar.requestFocus();
             return;
         }
+
+        //envia dados
+        Intent intent = new Intent(this, activity_perfil.class);
+
+        //envia data
+        String Data = dataNascimento.getText().toString();
+        intent.putExtra("covid19_data",Data);
+        //envia sexo
+        Spinner spinnerSexo = findViewById(R.id.spinnerSexoEditPerfil);
+        String Sexo = (String) spinnerSexo.getSelectedItem();
+        intent.putExtra("covid19_sexo",Sexo);
+        //envia altura
+
+        //envia peso
+
+        //envia sangue
+        
+        startActivity(intent);
     }
 }
