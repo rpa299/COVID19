@@ -24,6 +24,10 @@ public class activity_perfil extends AppCompatActivity {
         String sexo = intent.getStringExtra("covid19_sexo");
         TextView Sexo = (TextView) findViewById(R.id.textViewSexo);
         Sexo.setText(sexo);
+        //altura
+        String altura = intent.getStringExtra("covid19_altura");
+        TextView AlturaText = (TextView) findViewById(R.id.textViewAltura);
+        AlturaText.setText(altura);
         //Sangue
         String sangue = intent.getStringExtra("covid19_sangue");
         TextView TipoSangue = (TextView) findViewById(R.id.textViewTipoSangue);

@@ -165,7 +165,8 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         String Sexo = (String) spinnerSexo.getSelectedItem();
         intent.putExtra("covid19_sexo",Sexo);
         //envia altura
-
+        String Altura = editTextAlturaEditar.getText().toString();
+        intent.putExtra("covid19_altura",Altura);
         //envia peso
 
         //envia sangue
