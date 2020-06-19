@@ -35,6 +35,7 @@
     <string name="apagar">Delete</string>
     <string name="editar">Edit</string>
     <string name="escolherdata">Pick Date</string>
+    <string name="obrigatorio">Required Field</string>
     <string-array name="SexoPerfil">
         <item>---</item>
         <item>Masculino</item>
