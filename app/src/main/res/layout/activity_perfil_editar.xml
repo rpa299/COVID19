@@ -88,6 +88,7 @@
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
+                android:onClick="GuardarPerfil"
                 android:text="@string/confirmar"
                 android:textColor="@color/colorPrimaryDark" />
 

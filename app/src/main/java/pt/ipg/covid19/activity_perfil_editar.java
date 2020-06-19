@@ -26,19 +26,16 @@ import java.text.SimpleDateFormat;
 import java.time.Year;
 import java.util.Calendar;
 
-public class activity_perfil_editar extends AppCompatActivity implements AdapterView.OnItemSelectedListener, LoaderManager.LoaderCallbacks<Object> {
-    private static final int ID_CURSOR_LOADER_SERVICO = 0;
+public class activity_perfil_editar extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     TextView dataNascimento;
     TextInputEditText editTextAlturaEditar;
     TextInputEditText editTextPesoEditar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_editar);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         editTextAlturaEditar =(TextInputEditText) findViewById(R.id.editTextAlturaEditar);
         editTextPesoEditar = (TextInputEditText) findViewById(R.id.editTextPesoEditar);
@@ -55,12 +52,16 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         spinnerSangue.setAdapter(adapterSangue);
         spinnerSangue.setOnItemSelectedListener(this);
 
-        getSupportLoaderManager().initLoader(ID_CURSOR_LOADER_SERVICO, null, this);
-    }
-    protected void onResume() {
-        getSupportLoaderManager().restartLoader(ID_CURSOR_LOADER_SERVICO, null, this);
 
-        super.onResume();
+    }
+
+    public void GuardarPerfil(View view){
+        validarCampos();
+        Intent intent = new Intent(this, activity_perfil.class);
+        String data = dataNascimento.getText().toString();
+
+        intent.putExtra("covid19",data);
+        startActivity(intent);
     }
 
     public void escolherData(View view){
@@ -93,6 +94,9 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         startActivity(IntentPerfilEditar);
     }
 
+
+
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -100,22 +104,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
-    @NonNull
-    @Override
-    public Loader<Object> onCreateLoader(int id, @Nullable Bundle args) {
-        return null;
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<Object> loader, Object data) {
-
-    }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<Object> loader) {
 
     }
 
@@ -167,9 +155,5 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
             mensagemPesoEditar.requestFocus();
             return;
         }
-    }
-
-    public void Guardar(){
-        validarCampos();
     }
 }
