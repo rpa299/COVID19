@@ -42,4 +42,24 @@ public class activity_perfil extends AppCompatActivity {
         Intent IntentEditarPerfil = new Intent(this, activity_perfil_editar.class);
         startActivity(IntentEditarPerfil);
     }
+
+    public void onClickApagarPerfil(View view){
+        //apaga data
+        TextView dataNascimento = (TextView) findViewById(R.id.textViewNascimento);
+        dataNascimento.setText("");
+        //apaga sexo
+        TextView Sexo = (TextView) findViewById(R.id.textViewSexo);
+        Sexo.setText("");
+        //apaga altura
+        TextView AlturaText = (TextView) findViewById(R.id.textViewAltura);
+        AlturaText.setText("");
+        //apaga peso
+        TextView PesoText = (TextView) findViewById(R.id.textViewPeso);
+        PesoText.setText("");
+        //apaga sangue
+        TextView TipoSangue = (TextView) findViewById(R.id.textViewTipoSangue);
+        TipoSangue.setText("");
+        //toast para dizer que foi apagado
+        Toast.makeText(this, ("Apagado"),Toast.LENGTH_LONG).show();
+    }
 }

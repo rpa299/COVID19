@@ -32,4 +32,5 @@
     <string name="editar">Editar</string>
     <string name="escolherdata">Escolher data</string>
     <string name="obrigatorio">Campo Obrigatório</string>
+    <string name="data">Data</string>
 </resources>

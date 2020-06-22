@@ -16,64 +16,83 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDoresCabecaAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/dores_de_cabeca" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textViewSintomaDataAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/data" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDoresMuscularesAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/dores_musculares" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <Button
+                android:id="@+id/buttonEscolherDataAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cor_botoes"
+                android:text="@string/escolherdata"
+                android:textColor="@color/colorPrimaryDark" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCansacoAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/cansaco" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textViewDoresCabecaAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content"
+                android:text="@string/dores_de_cabeca" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDorGargantaAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/dores_de_garganta" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <Spinner
+                android:id="@+id/spinnerDoresCabecaAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextTosseAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/tosse" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/textViewDoresMuscularesAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dores_musculares" />
+
+            <Spinner
+                android:id="@+id/spinnerDoresMuscularesAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewCansacoAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/cansaco" />
+
+            <Spinner
+                android:id="@+id/spinnerCansacoAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewDoresGargantaAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dores_de_garganta" />
+
+            <Spinner
+                android:id="@+id/spinnerDoresGargantaAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textViewTosseAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tosse" />
+
+            <Spinner
+                android:id="@+id/spinnerTosseAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -87,29 +106,29 @@
                     android:hint="@string/temperatura" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textViewRespiracaoAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/respiracao" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextRespiracaoAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/respiracao" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <Spinner
+                android:id="@+id/spinnerRespiracaoAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp">
+                android:layout_height="wrap_content" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCorrNasalAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/corrimento_nasal" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/textViewCorrimentoNasalAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/corrimento_nasal" />
+
+            <Spinner
+                android:id="@+id/spinnerCorrimentoNasalAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/buttonConfirmarSintomaAdd"
