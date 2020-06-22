@@ -32,6 +32,7 @@
                 android:id="@+id/textViewDataNascimentoSusEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="@string/data_de_nascimento" />
 
@@ -49,6 +50,7 @@
                 android:id="@+id/textViewSusInfDateEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="@string/data_infe_o" />
 
@@ -61,6 +63,28 @@
                 android:background="@drawable/cor_botoes"
                 android:textColor="@color/colorPrimaryDark"
                 android:text="@string/escolherdata" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/cor_botoes"
+                android:text="@string/confirmar"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/cor_botoes"
+                android:text="@string/cancelar"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

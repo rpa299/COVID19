@@ -36,7 +36,7 @@
                 android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Pesquisar" />
+                android:text="@string/pesquisar" />
 
             <TextView
                 android:id="@+id/textViewSusViewDataNascimento"
