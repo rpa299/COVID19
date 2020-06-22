@@ -39,6 +39,14 @@
                 android:textColor="@color/colorPrimaryDark"
                 tools:text="Escolher Data" />
 
+            <TextView
+                android:id="@+id/textViewSexoEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/sexo" />
+
             <Spinner
                 android:id="@+id/spinnerSexoEditPerfil"
                 android:layout_width="match_parent"
@@ -58,7 +66,8 @@
                     android:id="@+id/editTextAlturaEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/altura" />
+                    android:hint="@string/altura"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -69,8 +78,17 @@
                     android:id="@+id/editTextPesoEditar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/peso" />
+                    android:hint="@string/peso"
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textViewTipoSangueEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/tipo_de_sangue" />
 
             <Spinner
                 android:id="@+id/spinnerTipoSangueEditPerfil"
@@ -100,6 +118,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
+                android:onClick="cancelar"
                 android:text="@string/cancelar"
                 android:textColor="@color/colorPrimaryDark" />
 

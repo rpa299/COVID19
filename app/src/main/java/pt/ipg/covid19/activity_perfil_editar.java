@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -30,8 +31,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
     TextView dataNascimento;
     TextInputEditText editTextAlturaEditar;
     TextInputEditText editTextPesoEditar;
-    Spinner spinnerSexo;
-    Spinner spinnerSangue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,11 +137,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         String peso = mensagemPesoEditar.getText().toString();
 
         //validação
-        if(data.trim().length() == 0){
-            mensagemDataNascimento.setError(getString(R.string.obrigatorio));
-            mensagemDataNascimento.requestFocus();
-            return;
-        }
         if(altura.trim().length() == 0){
             mensagemAlturaEditar.setError(getString(R.string.obrigatorio));
             mensagemAlturaEditar.requestFocus();
@@ -156,7 +150,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
 
         //envia dados
         Intent intent = new Intent(this, activity_perfil.class);
-
         //envia data
         String Data = dataNascimento.getText().toString();
         intent.putExtra("covid19_data",Data);
@@ -175,5 +168,10 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         String Sangue = (String) spinnerSangue.getSelectedItem();
         intent.putExtra("covid19_sangue",Sangue);
         startActivity(intent);
+    }
+
+    public void cancelar(View view){
+        finish();
+        Toast.makeText(this, ("Cancelado"),Toast.LENGTH_LONG).show();
     }
 }
