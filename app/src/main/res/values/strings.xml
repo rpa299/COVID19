@@ -51,4 +51,12 @@
         <item>O+</item>
         <item>O-</item>
     </string-array>
+    <string-array name="sintomas1">
+        <item>Não</item>
+        <item>Sim</item>
+    </string-array>
+    <string-array name="sintomas2">
+        <item>Normal</item>
+        <item>Curta</item>
+    </string-array>
 </resources>
