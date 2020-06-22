@@ -24,6 +24,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/cor_botoes"
+        android:onClick="escolherData"
         android:text="@string/escolherdata"
         android:textColor="@color/colorPrimaryDark" />
 

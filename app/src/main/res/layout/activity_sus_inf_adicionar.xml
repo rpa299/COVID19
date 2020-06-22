@@ -11,14 +11,13 @@
         android:id="@+id/buttonGuardarSusInf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:background="@drawable/cor_botoes"
         android:text="@string/guardar"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout12" />
+        tools:layout_editor_absoluteY="200dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout11"
@@ -65,23 +64,6 @@
             android:layout_height="wrap_content"
             android:hint="@string/nome"
             android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout12"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout11">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPeriodoEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/periodo"
-            android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
