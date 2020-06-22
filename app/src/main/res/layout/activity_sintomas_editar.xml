@@ -32,6 +32,7 @@
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
+                android:onClick="escolherData"
                 android:text="@string/escolherdata"
                 android:textColor="@color/colorPrimaryDark" />
 
@@ -136,9 +137,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
+                android:onClick="Guardar"
                 android:text="@string/confirmar"
                 android:textColor="@color/colorPrimaryDark" />
 
@@ -150,6 +152,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
+                android:onClick="cancelar"
                 android:text="@string/cancelar"
                 android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
