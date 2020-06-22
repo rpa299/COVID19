@@ -33,4 +33,5 @@
     <string name="escolherdata">Escolher data</string>
     <string name="obrigatorio">Campo Obrigatório</string>
     <string name="data">Data</string>
+    <string name="data_infe_o">Data de Infeção</string>
 </resources>

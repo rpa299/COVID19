@@ -37,6 +37,7 @@
     <string name="escolherdata">Pick Date</string>
     <string name="obrigatorio">Required Field</string>
     <string name="data">Date</string>
+    <string name="data_infe_o">Infection Date</string>
     <string-array name="SexoPerfil">
         <item>Masculino</item>
         <item>Feminino</item>

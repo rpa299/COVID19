@@ -34,9 +34,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
+                android:textColor="@color/colorPrimaryDark"
                 android:onClick="escolherData"
                 android:text="@string/escolherdata"
-                android:textColor="@color/colorPrimaryDark"
                 tools:text="Escolher Data" />
 
             <TextView
