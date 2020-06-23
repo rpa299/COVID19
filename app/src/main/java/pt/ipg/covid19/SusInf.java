@@ -2,7 +2,7 @@ package pt.ipg.covid19;
 
 public class SusInf {
     private long id = -1;
-    private String nome;
+    private String nomeSusInf;
     private String dataNascimento;
     private String dataInfecao;
 
@@ -15,11 +15,11 @@ public class SusInf {
     }
 
     public String getNome() {
-        return nome;
+        return nomeSusInf;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeSusInf = nome;
     }
 
     public String getDataNascimento() {

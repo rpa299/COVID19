@@ -3,7 +3,6 @@ package pt.ipg.covid19;
 public class Perfil {
     private long id = -1;
     private String nome;
-
     private String dataNascimento;
     private String sexo;
     private int altura;

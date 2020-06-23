@@ -8,54 +8,36 @@ import android.text.TextUtils;
 
 import java.util.Arrays;
 
-public class BdTableSintoma implements BaseColumns {
-    public static final String NOME_TABELA = "Sintoma";
+public class BdTableSusInf implements BaseColumns{
+    public static final String NOME_TABELA = "SuspeitoInfetado";
 
-    public static final String CAMPO_DATA = "Data";
-    public static final String CAMPO_DORES_CABECA = "DoresCabeca";
-    public static final String CAMPO_DORES_MUSCULARES = "DoresMusculares";
-    public static final String CAMPO_CANSACO = "Cansaco";
-    public static final String CAMPO_DORES_GARGANTA = "DoresGarganta";
-    public static final String CAMPO_TOSSE = "Tosse";
-    public static final String CAMPO_TEMPERATURA = "Temperatura";
-    public static final String CAMPO_RESPIRACAO = "Respiracao";
-    public static final String CAMPO_CORRIMENTO_NASAL = "CorrimentoNasal";
+    public static final String CAMPO_NOME_SUS_INF = "Data";
+    public static final String CAMPO_DATA_NASCIMENTO = "DoresCabeca";
+    public static final String CAMPO_DATA_INFECAO = "DoresMusculares";
     public static final String CAMPO_PERFIL = "Perfil";
     public static final String CAMPO_ID_PERFIL = "IdPerfil";
 
     public static final String CAMPO_ID_COMPLETO = NOME_TABELA + "." + _ID;
-    public static final String CAMPO_DATA_COMPLETO = NOME_TABELA + "." + CAMPO_DATA;
-    public static final String CAMPO_DORES_CABECA_COMPLETO = NOME_TABELA + "." + CAMPO_DORES_CABECA;
-    public static final String CAMPO_DORES_MUSCULARES_COMPLETO = NOME_TABELA + "." + CAMPO_DORES_MUSCULARES;
-    public static final String CAMPO_CANSACO_COMPLETO = NOME_TABELA + "." + CAMPO_CANSACO;
-    public static final String CAMPO_DORES_GARGANTA_COMPLETO = NOME_TABELA + "." + CAMPO_DORES_GARGANTA;
-    public static final String CAMPO_TOSSE_COMPLETO = NOME_TABELA + "." + CAMPO_TOSSE;
-    public static final String CAMPO_TEMPERATURA_COMPLETO = NOME_TABELA + "." + CAMPO_TEMPERATURA;
-    public static final String CAMPO_RESPIRACAO_COMPLETO = NOME_TABELA + "." + CAMPO_RESPIRACAO;
-    public static final String CAMPO_CORRIMENTO_NASAL_COMPLETO = NOME_TABELA + "." + CAMPO_CORRIMENTO_NASAL;
+    public static final String CAMPO_NOME_SUS_INF_COMPLETO = NOME_TABELA + "." + CAMPO_NOME_SUS_INF;
+    public static final String CAMPO_DATA_NASCIMENTO_COMPLETO = NOME_TABELA + "." + CAMPO_DATA_NASCIMENTO;
+    public static final String CAMPO_DATA_INFECAO_COMPLETO = NOME_TABELA + "." + CAMPO_DATA_INFECAO;
     public static final String CAMPO_PERFIL_COMPLETO = BdTablePerfil.CAMPO_NOME_COMPLETO + "." + CAMPO_PERFIL;
     public static final String CAMPO_ID_PERFIL_COMPLETO = NOME_TABELA + "." + CAMPO_ID_PERFIL;
 
-    public static final String[] TODOS_CAMPOS = {CAMPO_ID_COMPLETO, CAMPO_DATA_COMPLETO, CAMPO_DORES_CABECA_COMPLETO, CAMPO_DORES_MUSCULARES_COMPLETO, CAMPO_CANSACO_COMPLETO, CAMPO_DORES_GARGANTA_COMPLETO, CAMPO_TOSSE_COMPLETO, CAMPO_TEMPERATURA_COMPLETO, CAMPO_RESPIRACAO_COMPLETO, CAMPO_CORRIMENTO_NASAL_COMPLETO, CAMPO_ID_PERFIL_COMPLETO, CAMPO_PERFIL_COMPLETO};
+    public static final String[] TODOS_CAMPOS = {CAMPO_ID_COMPLETO, CAMPO_NOME_SUS_INF_COMPLETO, CAMPO_DATA_NASCIMENTO_COMPLETO, CAMPO_DATA_INFECAO_COMPLETO, CAMPO_PERFIL_COMPLETO, CAMPO_ID_PERFIL_COMPLETO};
 
     private SQLiteDatabase db;
 
-    public BdTableSintoma(SQLiteDatabase db) {
+    public BdTableSusInf(SQLiteDatabase db) {
         this.db = db;
     }
 
     public void cria(){
         db.execSQL("CREATE TABLE " + NOME_TABELA + " ("+
                 _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CAMPO_DATA + " TEXT NOT NULL," +
-                CAMPO_DORES_CABECA + " TEXT NOT NULL," +
-                CAMPO_DORES_MUSCULARES + " TEXT NOT NULL," +
-                CAMPO_CANSACO + " TEXT NOT NULL," +
-                CAMPO_DORES_GARGANTA + " TEXT NOT NULL," +
-                CAMPO_TOSSE + " TEXT NOT NULL," +
-                CAMPO_TEMPERATURA + " FLOAT NOT NULL," +
-                CAMPO_RESPIRACAO + " TEXT NOT NULL," +
-                CAMPO_CORRIMENTO_NASAL + " TEXT NOT NULL," +
+                CAMPO_NOME_SUS_INF + " TEXT NOT NULL," +
+                CAMPO_DATA_NASCIMENTO + " TEXT NOT NULL," +
+                CAMPO_DATA_INFECAO + " TEXT NOT NULL," +
                 CAMPO_ID_PERFIL + " INTEGER NOT NULL," +
                 "FOREIGN KEY (" + CAMPO_ID_PERFIL + ") REFERENCES " +
                 BdTablePerfil.NOME_TABELA + "(" + BdTablePerfil._ID + ")" +
