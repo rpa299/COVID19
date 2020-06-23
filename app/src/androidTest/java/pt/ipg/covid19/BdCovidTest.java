@@ -38,4 +38,6 @@ public class BdCovidTest {
     private Context getTargetContext() {
         return InstrumentationRegistry.getInstrumentation().getTargetContext();
     }
+
+
 }

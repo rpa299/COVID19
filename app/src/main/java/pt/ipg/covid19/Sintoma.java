@@ -11,6 +11,8 @@ public class Sintoma {
     private float temperatura;
     private String respiracao;
     private String corrimentoNasal;
+    private long idPerfil = -1;
+    private String NomePerfil = null;
 
     public long getId() {
         return id;
@@ -90,5 +92,21 @@ public class Sintoma {
 
     public void setCorrimentoNasal(String corrimentoNasal) {
         this.corrimentoNasal = corrimentoNasal;
+    }
+
+    public long getIdPerfil() {
+        return idPerfil;
+    }
+
+    public void setIdPerfil(long idPerfil) {
+        this.idPerfil = idPerfil;
+    }
+
+    public String getNomePerfil() {
+        return NomePerfil;
+    }
+
+    public void setNomePerfil(String nomePerfil) {
+        NomePerfil = nomePerfil;
     }
 }
