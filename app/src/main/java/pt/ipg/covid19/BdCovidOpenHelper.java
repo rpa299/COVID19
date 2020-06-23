@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class BdCovidOpenHelper extends SQLiteOpenHelper {
 
-    private static final String NOME_BASE_DADOS = "covid.db";
+    public static final String NOME_BASE_DADOS = "covid.db";
     private static final int VERSAO_BASE_DADOS = 1;
 
     /**
@@ -19,7 +19,7 @@ public class BdCovidOpenHelper extends SQLiteOpenHelper {
      *
      * @param context to use for locating paths to the the database
      */
-    public BdCovidOpenHelper(@Nullable Context context, int version) {
+    public BdCovidOpenHelper(@Nullable Context context) {
         super(context, NOME_BASE_DADOS, null, VERSAO_BASE_DADOS);
     }
 
