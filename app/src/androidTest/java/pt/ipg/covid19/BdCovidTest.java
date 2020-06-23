@@ -1,6 +1,7 @@
 package pt.ipg.covid19;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -109,5 +110,78 @@ public class BdCovidTest {
     }
 
     //testes para ler/alterar/inserir/eliminar Perfil
-    
+    @Test
+    public void consegueInserirPerfil(){
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        BdTablePerfil tabelaPerfil = new BdTablePerfil(bdCovid);
+
+        inserePerfil(tabelaPerfil, "Rodrigo","29/09/1999","Masculino",175,75,"A+");
+
+        bdCovid.close();
+    }
+    @Test
+    public void consegueLerPerfil() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        BdTablePerfil tabelaPerfil = new BdTablePerfil(bdCovid);
+
+        Cursor cursor = tabelaPerfil.query(BdTablePerfil.TODOS_CAMPOS, null, null, null, null, null);
+        int registos = cursor.getCount();
+        cursor.close();
+
+        inserePerfil(tabelaPerfil,"Rodrigo","29/09/1999","Masculino",175,75,"A+");
+
+        cursor = tabelaPerfil.query(BdTablePerfil.TODOS_CAMPOS, null, null, null, null, null);
+        assertEquals(registos + 1, cursor.getCount());
+        cursor.close();
+
+        bdCovid.close();
+    }
+    @Test
+    public void consegueAlterarPerfil() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        BdTablePerfil tabelaPerfil = new BdTablePerfil(bdCovid);
+
+        Perfil perfil = new Perfil();
+        perfil.setNome("Mariana");
+        perfil.setDataNascimento("04/01/1999");
+        perfil.setSexo("Feminino");
+        perfil.setAltura(160);
+        perfil.setPeso(50);
+        perfil.setTipoSangue("AB-");
+
+        long id = inserePerfil(tabelaPerfil, perfil);
+
+        int registosAfetados = tabelaPerfil.update(Converte.PerfilToContentValues(perfil), BdTablePerfil._ID + "=?", new String[]{String.valueOf(id)});
+        assertEquals(1, registosAfetados);
+
+        bdCovid.close();
+    }
+    @Test
+    public void consegueEliminarSintomas() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        BdTablePerfil tabelaPerfil = new BdTablePerfil(bdCovid);
+
+        long id = inserePerfil(tabelaPerfil,"Mariana","04/01/1999","Feminino",160,50,"AB-");
+
+        int registosEliminados = tabelaPerfil.delete(BdTablePerfil._ID + "=?", new String[]{String.valueOf(id)});
+        assertEquals(1, registosEliminados);
+
+        bdCovid.close();
+    }
 }
