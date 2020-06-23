@@ -2,6 +2,8 @@ package pt.ipg.covid19;
 
 public class Perfil {
     private long id = -1;
+    private String nome;
+
     private String dataNascimento;
     private String sexo;
     private int altura;
@@ -14,6 +16,14 @@ public class Perfil {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getDataNascimento() {

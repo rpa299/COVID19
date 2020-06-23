@@ -6,41 +6,59 @@ import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
 import android.text.TextUtils;
 
-public class BdTablePerfil implements BaseColumns {
-    public static final String NOME_TABELA = "Perfil";
+import java.util.Arrays;
 
-    public static final String CAMPO_NOME = "Nome";
-    public static final String CAMPO_DATA_NASCIMENTO = "DataNascimento";
-    public static final String CAMPO_SEXO = "Sexo";
-    public static final String CAMPO_ALTURA = "Altura";
-    public static final String CAMPO_PESO = "Peso";
-    public static final String CAMPO_TIPO_SANGUE = "TipoSangue";
+public class BdTableSintoma implements BaseColumns {
+    public static final String NOME_TABELA = "Sintoma";
+
+    public static final String CAMPO_DATA = "Data";
+    public static final String CAMPO_DORES_CABECA = "DoresCabeca";
+    public static final String CAMPO_DORES_MUSCULARES = "DoresMusculares";
+    public static final String CAMPO_CANSACO = "Cansaco";
+    public static final String CAMPO_DORES_GARGANTA = "DoresGarganta";
+    public static final String CAMPO_TOSSE = "Tosse";
+    public static final String CAMPO_TEMPERATURA = "Temperatura";
+    public static final String CAMPO_RESPIRACAO = "Respiracao";
+    public static final String CAMPO_CORRIMENTO_NASAL = "CorrimentoNasal";
+    public static final String CAMPO_PERFIL = "Perfil";
+    public static final String CAMPO_ID_PERFIL = "IdPerfil";
 
     public static final String CAMPO_ID_COMPLETO = NOME_TABELA + "." + _ID;
-    public static final String CAMPO_DATA_NASCIMENTO_COMPLETO = NOME_TABELA + "." + CAMPO_DATA_NASCIMENTO;
-    public static final String CAMPO_NOME_COMPLETO = NOME_TABELA + "." + CAMPO_NOME;
-    public static final String CAMPO_SEXO_COMPLETO = NOME_TABELA + "." + CAMPO_SEXO;
-    public static final String CAMPO_ALTURA_COMPLETO = NOME_TABELA + "." + CAMPO_ALTURA;
-    public static final String CAMPO_PESO_COMPLETO = NOME_TABELA + "." + CAMPO_PESO;
-    public static final String CAMPO_TIPO_SANGUE_COMPLETO = NOME_TABELA + "." + CAMPO_TIPO_SANGUE;
+    public static final String CAMPO_DATA_COMPLETO = NOME_TABELA + "." + CAMPO_DATA;
+    public static final String CAMPO_DORES_CABECA_COMPLETO = NOME_TABELA + "." + CAMPO_DORES_CABECA;
+    public static final String CAMPO_DORES_MUSCULARES_COMPLETO = NOME_TABELA + "." + CAMPO_DORES_MUSCULARES;
+    public static final String CAMPO_CANSACO_COMPLETO = NOME_TABELA + "." + CAMPO_CANSACO;
+    public static final String CAMPO_DORES_GARGANTA_COMPLETO = NOME_TABELA + "." + CAMPO_DORES_GARGANTA;
+    public static final String CAMPO_TOSSE_COMPLETO = NOME_TABELA + "." + CAMPO_TOSSE;
+    public static final String CAMPO_TEMPERATURA_COMPLETO = NOME_TABELA + "." + CAMPO_TEMPERATURA;
+    public static final String CAMPO_RESPIRACAO_COMPLETO = NOME_TABELA + "." + CAMPO_RESPIRACAO;
+    public static final String CAMPO_CORRIMENTO_NASAL_COMPLETO = NOME_TABELA + "." + CAMPO_CORRIMENTO_NASAL;
+    public static final String CAMPO_PERFIL_COMPLETO = BdTablePerfil.CAMPO_NOME_COMPLETO + "." + CAMPO_PERFIL;
+    public static final String CAMPO_ID_PERFIL_COMPLETO = NOME_TABELA + "." + CAMPO_ID_PERFIL;
 
-    public static final String[] TODOS_CAMPOS = {CAMPO_ID_COMPLETO, CAMPO_NOME_COMPLETO, CAMPO_DATA_NASCIMENTO_COMPLETO, CAMPO_SEXO_COMPLETO, CAMPO_ALTURA_COMPLETO, CAMPO_PESO_COMPLETO, CAMPO_TIPO_SANGUE_COMPLETO};
+    public static final String[] TODOS_CAMPOS = {CAMPO_ID_COMPLETO, CAMPO_DATA_COMPLETO, CAMPO_DORES_CABECA_COMPLETO, CAMPO_DORES_MUSCULARES_COMPLETO, CAMPO_CANSACO_COMPLETO, CAMPO_DORES_GARGANTA_COMPLETO, CAMPO_TOSSE_COMPLETO, CAMPO_TEMPERATURA_COMPLETO, CAMPO_RESPIRACAO_COMPLETO, CAMPO_CORRIMENTO_NASAL_COMPLETO};
 
     private SQLiteDatabase db;
 
-    public BdTablePerfil(SQLiteDatabase db) {
+    public BdTableSintoma(SQLiteDatabase db) {
         this.db = db;
     }
 
     public void cria(){
         db.execSQL("CREATE TABLE " + NOME_TABELA + " ("+
                 _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CAMPO_NOME + " TEXT NOT NULL," +
-                CAMPO_DATA_NASCIMENTO + " TEXT NOT NULL," +
-                CAMPO_SEXO + " TEXT NOT NULL," +
-                CAMPO_ALTURA + " INTEGER NOT NULL," +
-                CAMPO_PESO + " FLOAT NOT NULL," +
-                CAMPO_TIPO_SANGUE + " TEXT NOT NULL" +
+                CAMPO_DATA + " TEXT NOT NULL," +
+                CAMPO_DORES_CABECA + " TEXT NOT NULL," +
+                CAMPO_DORES_MUSCULARES + " TEXT NOT NULL," +
+                CAMPO_CANSACO + " TEXT NOT NULL," +
+                CAMPO_DORES_GARGANTA + " TEXT NOT NULL," +
+                CAMPO_TOSSE + " TEXT NOT NULL," +
+                CAMPO_TEMPERATURA + " FLOAT NOT NULL," +
+                CAMPO_RESPIRACAO + " TEXT NOT NULL," +
+                CAMPO_CORRIMENTO_NASAL + " TEXT NOT NULL," +
+                CAMPO_ID_PERFIL + " INTEGER NOT NULL," +
+                "FOREIGN KEY (" + CAMPO_ID_PERFIL + ") REFERENCES " +
+                BdTablePerfil.NOME_TABELA + "(" + BdTablePerfil._ID + ")" +
                 ")");
     }
 
@@ -86,7 +104,33 @@ public class BdTablePerfil implements BaseColumns {
     public Cursor query(String[] columns, String selection,
                         String[] selectionArgs, String groupBy, String having,
                         String orderBy) {
-        return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy);
+        if (!Arrays.asList(columns).contains(CAMPO_PERFIL_COMPLETO)) {
+            return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy);
+        }
+
+        String campos = TextUtils.join(",", columns);
+
+        String sql = "SELECT " + campos;
+        sql += " FROM " + NOME_TABELA + " INNER JOIN " + BdTablePerfil.NOME_TABELA;
+        sql += " ON " + CAMPO_ID_PERFIL_COMPLETO + "=" + BdTablePerfil.CAMPO_ID_COMPLETO;
+
+        if (selection != null) {
+            sql += " WHERE " + selection;
+        }
+
+        if (groupBy != null) {
+            sql += " GROUP BY " + groupBy;
+
+            if (having != null) {
+                sql += " HAVING " + having;
+            }
+        }
+
+        if (orderBy != null) {
+            sql += " ORDER BY " + orderBy;
+        }
+
+        return db.rawQuery(sql, selectionArgs);
     }
     /**
      * Convenience method for updating rows in the database.
