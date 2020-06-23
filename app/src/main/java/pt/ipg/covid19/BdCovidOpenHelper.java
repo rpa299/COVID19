@@ -1,11 +1,9 @@
 package pt.ipg.covid19;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class BdCovidOpenHelper extends SQLiteOpenHelper {
@@ -33,7 +31,14 @@ public class BdCovidOpenHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
+        BdTablePerfil tabelaPerfil = new BdTablePerfil(db);
+        tabelaPerfil.cria();
 
+        BdTableSintoma tabelaSintoma = new BdTableSintoma(db);
+        tabelaSintoma.cria();
+
+        BdTableSusInf tabelaSusInf = new BdTableSusInf(db);
+        tabelaSusInf.cria();
     }
 
     /**
