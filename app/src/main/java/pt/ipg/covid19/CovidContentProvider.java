@@ -4,6 +4,7 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
@@ -112,7 +113,29 @@ public class CovidContentProvider extends ContentProvider {
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
-        return null;
+        SQLiteDatabase bd = openHelper.getWritableDatabase();
+
+        long id;
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_PERFIL:
+                id = (new BdTablePerfil(bd).insert(values));
+                break;
+            case URI_SINTOMAS:
+                id = (new BdTableSintoma(bd).insert(values));
+                break;
+            case URI_SUSINF:
+                id = (new BdTableSusInf(bd).insert(values));
+                break;
+            default:
+                throw new UnsupportedOperationException("Endereço insert inválido: " + uri.getPath());
+        }
+
+        if (id == -1) {
+            throw new SQLException("Não foi possível inserir o registo: " + uri.getPath());
+        }
+
+        return Uri.withAppendedPath(uri, String.valueOf(id));
     }
 
     @Override
