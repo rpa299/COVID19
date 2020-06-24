@@ -219,5 +219,31 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
+    @Test
+    public void consegueAlterarSintoma() {
+        Context appContext = getTargetContext();
 
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        long idPerfil = insereSintoma(bdCovid, "24/06/2020", "sim", "sim", "sim", "sim", "não", 37, "normal", "sim",
+                "Rodrigo", "29/09/1999", "Masculino", 175, 75, "A+");
+
+        BdTableSintoma tabelaSintoma= new BdTableSintoma(bdCovid);
+
+        Cursor cursor = tabelaSintoma.query(BdTableSintoma.TODOS_CAMPOS, BdTableSintoma.CAMPO_ID_COMPLETO + "=?", new String[]{ String.valueOf(idPerfil) }, null, null, null);
+        assertEquals(1, cursor.getCount());
+
+        assertTrue(cursor.moveToNext());
+        Sintoma sintoma = Converte.cursorToSintoma(cursor);
+        cursor.close();
+
+        assertEquals("sim", sintoma.getDoresCabeca());
+
+        sintoma.setDoresGarganta("não");
+        int registosAfetados = tabelaSintoma.update(Converte.SintomaToContentValues(sintoma), BdTableSintoma.CAMPO_ID_COMPLETO + "=?", new String[]{String.valueOf(sintoma.getId())});
+        assertEquals(1, registosAfetados);
+
+        bdCovid.close();
+    }
 }

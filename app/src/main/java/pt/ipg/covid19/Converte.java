@@ -132,7 +132,7 @@ public class Converte {
         susInf.setDataInfecao(cursor.getString(cursor.getColumnIndex(BdTableSusInf.CAMPO_DATA_INFECAO)));
         susInf.setNomePerfil(cursor.getString(cursor.getColumnIndex(BdTableSusInf.CAMPO_PERFIL)));
         susInf.setIdPerfil(cursor.getLong(cursor.getColumnIndex(BdTableSusInf.CAMPO_ID_PERFIL)));
-        
+
         return susInf;
     }
 }
