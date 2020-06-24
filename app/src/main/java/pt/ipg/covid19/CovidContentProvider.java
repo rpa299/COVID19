@@ -89,7 +89,24 @@ public class CovidContentProvider extends ContentProvider {
     @Nullable
     @Override
     public String getType(@NonNull Uri uri) {
-        return null;
+        int codigoUri = getUriMatcher().match(uri);
+
+        switch (codigoUri) {
+            case URI_PERFIL:
+                return CURSOR_DIR + PERFIL;
+            case URI_ID_PERFIL:
+                return CURSOR_ITEM + PERFIL;
+            case URI_SINTOMAS:
+                return CURSOR_DIR + SINTOMAS;
+            case URI_ID_SINTOMAS:
+                return CURSOR_ITEM + SINTOMAS;
+            case URI_SUSINF:
+                return CURSOR_DIR + SUSINF;
+            case URI_ID_SUSINF:
+                return CURSOR_ITEM + SUSINF;
+            default:
+                return null;
+        }
     }
 
     @Nullable
