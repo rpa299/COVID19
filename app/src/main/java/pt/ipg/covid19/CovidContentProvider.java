@@ -48,10 +48,11 @@ public class CovidContentProvider extends ContentProvider {
 
         return uriMatcher;
     }
-    
+
     @Override
     public boolean onCreate() {
-        return false;
+        openHelper = new BdCovidOpenHelper(getContext());
+        return true;
     }
 
     @Nullable
