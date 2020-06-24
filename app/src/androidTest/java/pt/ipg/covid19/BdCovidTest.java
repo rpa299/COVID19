@@ -280,4 +280,26 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
+    @Test
+    public void consegueLerSusInf() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        BdTableSusInf tabelaSusInf = new BdTableSusInf(bdCovid);
+
+        Cursor cursor = tabelaSusInf.query(BdTableSusInf.TODOS_CAMPOS, null, null, null, null, null);
+        int registos = cursor.getCount();
+        cursor.close();
+
+        insereSusInf(bdCovid,"David","01/01/2020","20/06/2020",
+                "Rodrigo","29/09/1999","Masculino",175,75,"A+");
+
+        cursor = tabelaSusInf.query(BdTableSusInf.TODOS_CAMPOS, null, null, null, null, null);
+        assertEquals(registos + 1, cursor.getCount());
+        cursor.close();
+
+        bdCovid.close();
+    }
 }
