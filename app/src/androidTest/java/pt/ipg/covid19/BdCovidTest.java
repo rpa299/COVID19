@@ -109,6 +109,7 @@ public class BdCovidTest {
         return  id;
     }
 
+
     //testes para ler/alterar/inserir/eliminar Perfil
     @Test
     public void consegueInserirPerfil(){
@@ -169,7 +170,7 @@ public class BdCovidTest {
         bdCovid.close();
     }
     @Test
-    public void consegueEliminarSintomas() {
+    public void consegueEliminarPerfil() {
         Context appContext = getTargetContext();
 
         BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
@@ -184,6 +185,8 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
+
+
     //testes para ler/alterar/inserir/eliminar Sintoma
     @Test
     public void consegueInserirSintoma() {
@@ -259,6 +262,21 @@ public class BdCovidTest {
         BdTableSintoma tabelaSintoma = new BdTableSintoma(bdCovid);
         int registosEliminados = tabelaSintoma.delete(BdTableSintoma._ID + "=?", new String[]{String.valueOf(id)});
         assertEquals(1, registosEliminados);
+
+        bdCovid.close();
+    }
+
+
+    ////testes para ler/alterar/inserir/eliminar SusInf
+    @Test
+    public void consegueInserirSusInf() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        insereSusInf(bdCovid,"David","01/01/2020","20/06/2020",
+                        "Rodrigo","29/09/1999","Masculino",175,75,"A+");
 
         bdCovid.close();
     }
