@@ -114,7 +114,6 @@ public class CovidContentProvider extends ContentProvider {
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
         SQLiteDatabase bd = openHelper.getWritableDatabase();
-
         long id;
 
         switch (getUriMatcher().match(uri)) {
@@ -140,7 +139,19 @@ public class CovidContentProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+        SQLiteDatabase bd = openHelper.getWritableDatabase();
+        String id = uri.getLastPathSegment();
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_ID_PERFIL:
+                return new BdTablePerfil(bd).delete(BdTablePerfil._ID + "=?", new String[]{id});
+            case URI_ID_SINTOMAS:
+                return new BdTableSintoma(bd).delete(BdTableSintoma._ID + "=?", new String[] { id });
+            case URI_ID_SUSINF:
+                return new BdTableSusInf(bd).delete(BdTableSusInf._ID + "=?", new String[] { id });
+            default:
+                throw new UnsupportedOperationException("Endereço delete inválido: " + uri.getPath());
+        }
     }
 
     @Override
