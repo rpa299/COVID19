@@ -329,4 +329,20 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
+    @Test
+    public void consegueEliminarSusInf() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        long id = insereSusInf(bdCovid,"David","01/01/2020","20/06/2020",
+                "Rodrigo","29/09/1999","Masculino",175,75,"A+");
+
+        BdTableSusInf tabelaSusInf = new BdTableSusInf(bdCovid);
+        int registosEliminados = tabelaSusInf.delete(BdTableSusInf._ID + "=?", new String[]{String.valueOf(id)});
+        assertEquals(1, registosEliminados);
+
+        bdCovid.close();
+    }
 }
