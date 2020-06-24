@@ -16,6 +16,7 @@ public class Converte {
         valores.put(BdTableSintoma.CAMPO_TEMPERATURA, sintoma.getTemperatura());
         valores.put(BdTableSintoma.CAMPO_RESPIRACAO, sintoma.getRespiracao());
         valores.put(BdTableSintoma.CAMPO_CORRIMENTO_NASAL, sintoma.getCorrimentoNasal());
+        valores.put(BdTableSintoma.CAMPO_ID_PERFIL, sintoma.getIdPerfil());
 
         return valores;
     }
@@ -72,6 +73,7 @@ public class Converte {
         valores.put(BdTableSusInf.CAMPO_NOME_SUS_INF, susInf.getNomeSusInf());
         valores.put(BdTableSusInf.CAMPO_DATA_INFECAO, susInf.getDataInfecao());
         valores.put(BdTableSusInf.CAMPO_DATA_NASCIMENTO, susInf.getDataNascimento());
+        valores.put(BdTableSusInf.CAMPO_ID_PERFIL, susInf.getIdPerfil());
 
         return valores;
     }

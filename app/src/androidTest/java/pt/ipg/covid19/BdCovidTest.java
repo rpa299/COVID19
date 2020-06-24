@@ -184,4 +184,18 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
+    //testes para ler/alterar/inserir/eliminar Sintoma
+    @Test
+    public void consegueInserirSintoma() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        insereSintoma(bdCovid, "24/06/2020", "sim", "sim", "sim", "sim", "não", 37, "normal", "sim",
+                        "Rodrigo", "29/09/1999", "Masculino", 175, 75, "A+");
+
+        bdCovid.close();
+    }
+    
 }
