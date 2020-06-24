@@ -197,5 +197,26 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
-    
+    @Test
+    public void consegueLerSintoma() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        BdTableSintoma tabelaSintoma = new BdTableSintoma(bdCovid);
+
+        Cursor cursor = tabelaSintoma.query(BdTableSintoma.TODOS_CAMPOS, null, null, null, null, null);
+        int registos = cursor.getCount();
+        cursor.close();
+
+        insereSintoma(bdCovid, "24/06/2020", "sim", "sim", "sim", "sim", "não", 37, "normal", "sim",
+                "Rodrigo", "29/09/1999", "Masculino", 175, 75, "A+");
+
+        cursor = tabelaSintoma.query(BdTableSintoma.TODOS_CAMPOS, null, null, null, null, null);
+        assertEquals(registos + 1, cursor.getCount());
+        cursor.close();
+
+        bdCovid.close();
+    }
 }
