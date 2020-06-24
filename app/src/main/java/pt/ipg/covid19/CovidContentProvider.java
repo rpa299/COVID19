@@ -156,6 +156,18 @@ public class CovidContentProvider extends ContentProvider {
 
     @Override
     public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+        SQLiteDatabase bd = openHelper.getWritableDatabase();
+        String id = uri.getLastPathSegment();
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_ID_PERFIL:
+                return new BdTablePerfil(bd).update(values, BdTablePerfil._ID + "=?", new String[] { id });
+            case URI_ID_SINTOMAS:
+                return new BdTableSintoma(bd).update(values,BdTableSintoma._ID + "=?", new String[] { id });
+            case URI_ID_SUSINF:
+                return new BdTableSusInf(bd).update(values,BdTableSusInf._ID + "=?", new String[] { id });
+            default:
+                throw new UnsupportedOperationException("Endereço de update inválido: " + uri.getPath());
+        }
     }
 }
