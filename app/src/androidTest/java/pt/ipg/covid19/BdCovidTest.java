@@ -246,4 +246,20 @@ public class BdCovidTest {
 
         bdCovid.close();
     }
+    @Test
+    public void consegueEliminarSintoma() {
+        Context appContext = getTargetContext();
+
+        BdCovidOpenHelper openHelper = new BdCovidOpenHelper(appContext);
+        SQLiteDatabase bdCovid = openHelper.getWritableDatabase();
+
+        long id = insereSintoma(bdCovid, "24/06/2020", "sim", "sim", "sim", "sim", "não", 37, "normal", "sim",
+                "Rodrigo", "29/09/1999", "Masculino", 175, 75, "A+");
+
+        BdTableSintoma tabelaSintoma = new BdTableSintoma(bdCovid);
+        int registosEliminados = tabelaSintoma.delete(BdTableSintoma._ID + "=?", new String[]{String.valueOf(id)});
+        assertEquals(1, registosEliminados);
+
+        bdCovid.close();
+    }
 }
