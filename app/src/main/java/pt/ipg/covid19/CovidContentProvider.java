@@ -4,6 +4,7 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
 import androidx.annotation.NonNull;
@@ -58,7 +59,31 @@ public class CovidContentProvider extends ContentProvider {
     @Nullable
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
-        return null;
+        SQLiteDatabase bd = openHelper.getReadableDatabase();
+        String id = uri.getLastPathSegment();
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_PERFIL:
+                return new BdTablePerfil(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
+
+            case URI_ID_PERFIL:
+                return new BdTablePerfil(bd).query(projection, BdTablePerfil._ID + "=?", new String[]{id}, null, null, sortOrder);
+
+            case URI_SINTOMAS:
+                return new BdTableSintoma(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
+
+            case URI_ID_SINTOMAS:
+                return new BdTableSintoma(bd).query(projection, BdTableSintoma._ID + "=?", new String[]{id}, null, null, sortOrder);
+
+            case URI_SUSINF:
+                return new BdTableSusInf(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
+
+            case URI_ID_SUSINF:
+                return new BdTableSusInf(bd).query(projection, BdTableSusInf._ID + "=?", new String[]{id}, null, null, sortOrder);
+
+            default:
+                throw new UnsupportedOperationException("Endereço query inválido: " + uri.getPath());
+        }
     }
 
     @Nullable
