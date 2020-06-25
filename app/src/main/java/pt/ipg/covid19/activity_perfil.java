@@ -78,6 +78,11 @@ public class activity_perfil extends AppCompatActivity implements LoaderManager.
             intent.putExtra(ID_PERFIL, adaptadorPerfil.getPerfilSelecionado().getId());
             startActivity(intent);
         }
+        else if(id == R.id.action_moreDelete){
+            Intent intent = new Intent(this, activity_perfil_delete.class);
+            intent.putExtra(ID_PERFIL, adaptadorPerfil.getPerfilSelecionado().getId());
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 
