@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
-    tools:context=".activity_perfil_editar" >
+    tools:context=".activity_perfil_adicionar"
+    tools:layout_editor_absoluteY="81dp">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="409dp"
+        android:layout_height="601dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextNomeEditPerfil"
+                    android:id="@+id/editTextNomePerfilAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/nome"
@@ -29,17 +33,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textViewDataNascimento"
+                android:id="@+id/textViewDataNascimentoPerfilAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="@string/data_de_nascimento"
                 android:textIsSelectable="false"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <Button
-                android:id="@+id/BotaoEscolherData"
+                android:id="@+id/buttonEscolherDataAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -47,26 +51,20 @@
                 android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="escolherData"
-                android:text="@string/escolherdata"
-                tools:text="Escolher Data" />
+                android:text="@string/escolherdata" />
 
             <TextView
-                android:id="@+id/textViewSexoEditar"
+                android:id="@+id/textViewSexoAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/sexo" />
 
             <Spinner
-                android:id="@+id/spinnerSexoEditPerfil"
+                android:id="@+id/spinnerSexoAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:addStatesFromChildren="false"
-                android:isScrollContainer="false"
-                android:spinnerMode="dropdown"
-                />
+                android:layout_marginTop="8dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -74,7 +72,7 @@
                 android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextAlturaEditar"
+                    android:id="@+id/editTextAlturaAddPerfil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/altura"
@@ -83,10 +81,11 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextPesoEditar"
+                    android:id="@+id/editTextPesoAddPerfil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/peso"
@@ -94,21 +93,21 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textViewTipoSangueEditar"
+                android:id="@+id/textViewTipoSangueAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/tipo_de_sangue" />
 
             <Spinner
-                android:id="@+id/spinnerTipoSangueEditPerfil"
+                android:id="@+id/spinnerTipoSagueAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"/>
 
             <Button
-                android:id="@+id/buttonEditarPerfilConfirmar"
+                android:id="@+id/buttonConfirmarPerfilAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -117,23 +116,19 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
                 android:textColor="@color/colorPrimaryDark"
-                android:onClick="GuardarPerfil"
-                android:text="@string/confirmar"
-                 />
+                android:text="@string/confirmar" />
 
             <Button
-                android:id="@+id/buttonEditarPerfilCancelar"
+                android:id="@+id/buttonCancelarPerfilAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="60dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
-                android:onClick="cancelar"
-                android:text="@string/cancelar"
-                android:textColor="@color/colorPrimaryDark" />
-
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/cancelar" />
         </LinearLayout>
     </ScrollView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
