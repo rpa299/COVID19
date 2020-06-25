@@ -50,8 +50,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="60dp"
                 android:background="@drawable/cor_botoes"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="@string/escolherdata" />
+                android:onClick="escolherData"
+                android:text="@string/escolherdata"
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/textViewSexoAdd"
@@ -115,8 +116,9 @@
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="@string/confirmar" />
+                android:onClick="GuardarPerfil"
+                android:text="@string/confirmar"
+                android:textColor="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/buttonCancelarPerfilAdd"
@@ -127,8 +129,9 @@
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/cor_botoes"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="@string/cancelar" />
+                android:onClick="cancelar"
+                android:text="@string/cancelar"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

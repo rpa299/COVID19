@@ -68,11 +68,14 @@ public class activity_perfil extends AppCompatActivity implements LoaderManager.
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.action_moreEdit) {
+        if(id == R.id.action_moreAdd){
+            Intent intent = new Intent(this, activity_perfil_adicionar.class);
+            startActivity(intent);
+            return true;
+        }
+        else if(id == R.id.action_moreEdit) {
             Intent intent = new Intent(this, activity_perfil_editar.class);
-
             intent.putExtra(ID_PERFIL, adaptadorPerfil.getPerfilSelecionado().getId());
-
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

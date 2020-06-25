@@ -31,12 +31,14 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
     TextView dataNascimento;
     TextInputEditText editTextAlturaEditar;
     TextInputEditText editTextPesoEditar;
+    TextInputEditText editTextNomeEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_editar);
 
+        editTextNomeEditar = (TextInputEditText) findViewById(R.id.editTextNomeEditPerfil);
         editTextAlturaEditar =(TextInputEditText) findViewById(R.id.editTextAlturaEditar);
         editTextPesoEditar = (TextInputEditText) findViewById(R.id.editTextPesoEditar);
 
@@ -51,8 +53,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         adapterSangue.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSangue.setAdapter(adapterSangue);
         spinnerSangue.setOnItemSelectedListener(this);
-
-
     }
 
     public void GuardarPerfil(View view){
@@ -100,16 +100,21 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
     }
 
     public void validarCampos(){
-        TextView mensagemDataNascimento = (TextView) findViewById(R.id.textViewDataNascimento);
+        TextView mensagemNome = (TextInputEditText) findViewById(R.id.editTextNomeEditPerfil);
         TextInputEditText mensagemAlturaEditar = (TextInputEditText) findViewById(R.id.editTextAlturaEditar);
         TextInputEditText mensagemPesoEditar = (TextInputEditText) findViewById(R.id.editTextPesoEditar);
 
         //mete os valores em strings
-        String data =mensagemDataNascimento.getText().toString();
+        String nome =mensagemNome.getText().toString();
         String altura = mensagemAlturaEditar.getText().toString();
         String peso = mensagemPesoEditar.getText().toString();
 
         //validação
+        if(nome.trim().length() == 0){
+            mensagemNome.setError(getString(R.string.obrigatorio));
+            mensagemNome.requestFocus();
+            return;
+        }
         if(altura.trim().length() == 0){
             mensagemAlturaEditar.setError(getString(R.string.obrigatorio));
             mensagemAlturaEditar.requestFocus();
@@ -120,27 +125,6 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
             mensagemPesoEditar.requestFocus();
             return;
         }
-
-        //envia dados
-        Intent intent = new Intent(this, activity_perfil.class);
-        //envia data
-        String Data = dataNascimento.getText().toString();
-        intent.putExtra("covid19_data",Data);
-        //envia sexo
-        Spinner spinnerSexo = findViewById(R.id.spinnerSexoEditPerfil);
-        String Sexo = (String) spinnerSexo.getSelectedItem();
-        intent.putExtra("covid19_sexo",Sexo);
-        //envia altura
-        String Altura = editTextAlturaEditar.getText().toString();
-        intent.putExtra("covid19_altura",Altura);
-        //envia peso
-        String Peso = editTextPesoEditar.getText().toString();
-        intent.putExtra("covid19_peso",Peso);
-        //envia sangue
-        Spinner spinnerSangue = findViewById(R.id.spinnerTipoSangueEditPerfil);
-        String Sangue = (String) spinnerSangue.getSelectedItem();
-        intent.putExtra("covid19_sangue",Sangue);
-        startActivity(intent);
     }
 
     public void cancelar(View view){
