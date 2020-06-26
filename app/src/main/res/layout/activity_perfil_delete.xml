@@ -155,10 +155,10 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="60dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/cor_botoes"
-        android:textColor="@color/colorPrimaryDark"
+        android:onClick="Cancelar"
         android:text="@string/cancelar"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonConfirmarDeletePerfil" />
