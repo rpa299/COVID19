@@ -54,6 +54,7 @@ public class activity_perfil extends AppCompatActivity implements LoaderManager.
 
         boolean mostraAlterarEliminar = (perfilModel != null);
         menu.findItem(R.id.action_moreEdit).setVisible(mostraAlterarEliminar);
+        menu.findItem(R.id.action_moreDelete).setVisible(mostraAlterarEliminar);
     }
 
     @Override
