@@ -6,7 +6,7 @@ public class Perfil {
     private String dataNascimento;
     private String sexo;
     private int altura;
-    private float peso;
+    private int peso;
     private String tipoSangue;
 
     public long getId() {
@@ -49,11 +49,11 @@ public class Perfil {
         this.altura = altura;
     }
 
-    public float getPeso() {
+    public int getPeso() {
         return peso;
     }
 
-    public void setPeso(float peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
 

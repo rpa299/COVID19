@@ -10,6 +10,7 @@ public class BdCovidOpenHelper extends SQLiteOpenHelper {
 
     public static final String NOME_BASE_DADOS = "covid.db";
     private static final int VERSAO_BASE_DADOS = 1;
+    private static final boolean DESENVOLVIMENTO = false;
 
     /**
      * Create a helper object to create, open, and/or manage a database.
@@ -39,6 +40,25 @@ public class BdCovidOpenHelper extends SQLiteOpenHelper {
 
         BdTableSusInf tabelaSusInf = new BdTableSusInf(db);
         tabelaSusInf.cria();
+
+        if (DESENVOLVIMENTO) {
+            seedData(db);
+        }
+    }
+
+    private void seedData(SQLiteDatabase db) {
+
+        BdTablePerfil tabelaPerfil = new BdTablePerfil(db);
+
+        Perfil perfil = new Perfil();
+
+        perfil.setNome("Rodrigo Almeida");
+        perfil.setDataNascimento("29/09/1999");
+        perfil.setSexo("Masculino");
+        perfil.setAltura(175);
+        perfil.setPeso(76);
+        perfil.setTipoSangue("A+");
+        tabelaPerfil.insert(Converte.PerfilToContentValues(perfil));
     }
 
     /**

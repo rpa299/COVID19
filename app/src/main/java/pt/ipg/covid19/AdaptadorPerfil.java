@@ -67,7 +67,6 @@ public class AdaptadorPerfil extends RecyclerView.Adapter<AdaptadorPerfil.ViewHo
         private final TextView textViewPeso;
         private final TextView textViewTipoSangue;
 
-
         public ViewHolderPerfil(@NonNull View itemView) {
             super(itemView);
 
@@ -82,14 +81,13 @@ public class AdaptadorPerfil extends RecyclerView.Adapter<AdaptadorPerfil.ViewHo
         }
 
         public void setPerfil(Perfil perfil) {
-
             this.perfil = perfil;
 
             textViewNome.setText(perfil.getNome());
             textViewDataNascimento.setText(perfil.getDataNascimento());
             textViewSexo.setText(perfil.getSexo());
-            textViewAltura.setText((int)perfil.getAltura());
-            textViewPeso.setText((int) perfil.getPeso());
+            textViewAltura.setText(String.valueOf(perfil.getAltura()));
+            textViewPeso.setText(String.valueOf(perfil.getPeso()));
             textViewTipoSangue.setText(perfil.getTipoSangue());
         }
 

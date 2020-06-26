@@ -3,17 +3,23 @@ package pt.ipg.covid19;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
+
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 
@@ -87,29 +93,56 @@ public class activity_perfil_adicionar extends AppCompatActivity implements Adap
 
     public void validarCampos(){
         TextView mensagemNomeAdd = (TextInputEditText) findViewById(R.id.editTextNomePerfilAdd);
+        TextView mensagemDataAdd = (TextView) findViewById(R.id.textViewDataNascimentoPerfilAdd);
+        Spinner spinnerSexo = findViewById(R.id.spinnerSexoAdd);
         TextInputEditText mensagemAlturaAdd = (TextInputEditText) findViewById(R.id.editTextAlturaAddPerfil);
         TextInputEditText mensagemPesoAdd = (TextInputEditText) findViewById(R.id.editTextPesoAddPerfil);
+        Spinner spinnerSangue = findViewById(R.id.spinnerTipoSagueAdd);
 
         //mete os valores em strings
         String nome =mensagemNomeAdd.getText().toString();
+        String data = mensagemDataAdd.getText().toString();
+        String sexo = spinnerSexo.getSelectedItem().toString();
         String altura = mensagemAlturaAdd.getText().toString();
         String peso = mensagemPesoAdd.getText().toString();
+        String sangue = spinnerSangue.getSelectedItem().toString();
+
+        Integer alturaInt = Integer.parseInt(altura);
+        Integer pesoFloat = Integer.parseInt(peso);
 
         //validação
-        if(nome.trim().length() == 0){
+        if(nome.trim().isEmpty()){
             mensagemNomeAdd.setError(getString(R.string.obrigatorio));
             mensagemNomeAdd.requestFocus();
             return;
         }
-        if(altura.trim().length() == 0){
+        if(altura.trim().isEmpty()){
             mensagemAlturaAdd.setError(getString(R.string.obrigatorio));
             mensagemAlturaAdd.requestFocus();
             return;
         }
-        if(peso.trim().length() == 0){
+        if(peso.trim().isEmpty()){
             mensagemPesoAdd.setError(getString(R.string.obrigatorio));
             mensagemPesoAdd.requestFocus();
             return;
+        }
+
+        //guardar dados
+        Perfil perfil = new Perfil();
+        perfil.setNome(nome);
+        perfil.setDataNascimento(data);
+        perfil.setSexo(sexo);
+        perfil.setAltura(alturaInt);
+        perfil.setPeso(pesoFloat);
+        perfil.setTipoSangue(sangue);
+
+        try {
+            this.getContentResolver().insert(CovidContentProvider.ENDERECO_PERFIL, Converte.PerfilToContentValues(perfil));
+            Toast.makeText(this, R.string.Sucesso, Toast.LENGTH_LONG).show();
+            finish();
+
+        } catch (Exception e) {
+            Snackbar.make(editTextNomeAdd, "Erro: Não foi possível criar a Pessoa", Snackbar.LENGTH_INDEFINITE).show();
         }
     }
 

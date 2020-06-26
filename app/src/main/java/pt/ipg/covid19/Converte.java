@@ -61,7 +61,7 @@ public class Converte {
         perfil.setDataNascimento(valores.getAsString(BdTablePerfil.CAMPO_DATA_NASCIMENTO));
         perfil.setSexo(valores.getAsString(BdTablePerfil.CAMPO_SEXO));
         perfil.setAltura(valores.getAsInteger(BdTablePerfil.CAMPO_ALTURA));
-        perfil.setPeso(valores.getAsFloat(BdTablePerfil.CAMPO_PESO));
+        perfil.setPeso(valores.getAsInteger(BdTablePerfil.CAMPO_PESO));
         perfil.setTipoSangue(valores.getAsString(BdTablePerfil.CAMPO_TIPO_SANGUE));
 
         return perfil;
@@ -98,7 +98,7 @@ public class Converte {
         perfil.setDataNascimento(cursor.getString(cursor.getColumnIndex(BdTablePerfil.CAMPO_DATA_NASCIMENTO)));
         perfil.setSexo(cursor.getString(cursor.getColumnIndex(BdTablePerfil.CAMPO_SEXO)));
         perfil.setAltura(cursor.getInt(cursor.getColumnIndex(BdTablePerfil.CAMPO_ALTURA)));
-        perfil.setPeso(cursor.getFloat(cursor.getColumnIndex(BdTablePerfil.CAMPO_PESO)));
+        perfil.setPeso(cursor.getInt(cursor.getColumnIndex(BdTablePerfil.CAMPO_PESO)));
         perfil.setTipoSangue(cursor.getString(cursor.getColumnIndex(BdTablePerfil.CAMPO_TIPO_SANGUE)));
 
         return perfil;
