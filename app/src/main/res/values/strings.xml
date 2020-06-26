@@ -40,6 +40,7 @@
     <string name="data_infe_o">Infection Date</string>
     <string name="pesquisar">Search</string>
     <string name="Sucesso">Sucess</string>
+    <string name="Erro">Error. Try again</string>
     <string-array name="SexoPerfil">
         <item>Masculino</item>
         <item>Feminino</item>

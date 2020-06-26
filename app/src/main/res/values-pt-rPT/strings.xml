@@ -36,4 +36,5 @@
     <string name="data_infe_o">Data de Infeção</string>
     <string name="pesquisar">Pesquisar</string>
     <string name="Sucesso">Sucesso</string>
+    <string name="Erro">Erro. Tente de novo</string>
 </resources>
