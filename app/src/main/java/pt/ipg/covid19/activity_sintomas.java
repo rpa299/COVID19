@@ -84,8 +84,8 @@ public class activity_sintomas extends AppCompatActivity implements LoaderManage
                 return true;
         }
         else if(id == R.id.action_moreDelete){
-                Intent intent = new Intent(this, activity_perfil_delete.class);
-                intent.putExtra(ID_SINTOMA, adaptadorSintoma.getSintomaSelecionado().getId());
+                Intent intent = new Intent(this, activity_sintomas_delete.class);
+                intent.putExtra("SintomaDelete",sintoma);
                 startActivity(intent);
                 return true;
         }

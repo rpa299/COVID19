@@ -42,6 +42,7 @@
     <string name="Sucesso">Success</string>
     <string name="Erro">Error. Try again</string>
     <string name="ApagarPessoa">Delete Person</string>
+    <string name="ApagarSintoma">Delete Simpton</string>
     <string name="Certeza">Are you sure you want to delete?</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>

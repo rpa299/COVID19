@@ -90,7 +90,7 @@ public class activity_perfil_delete extends AppCompatActivity implements LoaderM
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle(R.string.ApagarPessoa);
-        builder.setMessage("" + R.string.Certeza + perfil.getNome());
+        builder.setMessage(R.string.Certeza);
         builder.setIcon(R.drawable.ic_delete);
         builder.setPositiveButton(R.string.Yes, new DialogInterface.OnClickListener() {
             @Override

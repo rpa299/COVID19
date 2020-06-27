@@ -38,6 +38,7 @@
     <string name="Sucesso">Sucesso</string>
     <string name="Erro">Erro. Tente de novo</string>
     <string name="ApagarPessoa">Apagar Pessoa</string>
+    <string name="ApagarSintoma">Apagar Sintoma</string>
     <string name="Certeza">Tem a certeza que pretende eliminar?</string>
     <string name="Yes">Sim</string>
     <string name="No">Não</string>
