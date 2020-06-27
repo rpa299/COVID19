@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <TextView
+        android:id="@+id/textViewItemCorrimentoNasal"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemCorrimentoNasal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemRespiracao" />
+
+    <TextView
+        android:id="@+id/textViewItemRespiracao"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemRespiracao"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemTemperatura" />
+
+    <TextView
+        android:id="@+id/textViewItemTemperatura"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemTemperatura"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemTosse" />
+
+    <TextView
+        android:id="@+id/ItemNome"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ItemData"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemNome" />
+
+    <TextView
+        android:id="@+id/ItemDoresCabeca"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dores_de_cabeca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemData" />
+
+    <TextView
+        android:id="@+id/ItemDoresMusculares"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dores_musculares"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemDoresCabeca" />
+
+    <TextView
+        android:id="@+id/ItemCansaco"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/cansaco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemDoresMusculares" />
+
+    <TextView
+        android:id="@+id/ItemDoresGarganta"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dores_de_garganta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemCansaco" />
+
+    <TextView
+        android:id="@+id/ItemTosse"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tosse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemDoresGarganta" />
+
+    <TextView
+        android:id="@+id/ItemTemperatura"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/temperatura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemTosse" />
+
+    <TextView
+        android:id="@+id/ItemRespiracao"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/respiracao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemTemperatura" />
+
+    <TextView
+        android:id="@+id/ItemCorrimentoNasal"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/corrimento_nasal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemRespiracao" />
+
+    <TextView
+        android:id="@+id/textViewItemNome"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemNome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewItemData"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemData"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemNome" />
+
+    <TextView
+        android:id="@+id/textViewItemDoresCabeca"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemDoresCabeca"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemData" />
+
+    <TextView
+        android:id="@+id/textViewItemDoresMusculares"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemDoresMusculares"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemDoresCabeca" />
+
+    <TextView
+        android:id="@+id/textViewItemCansaco"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemCansaco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemDoresMusculares" />
+
+    <TextView
+        android:id="@+id/textViewItemDoresGarganta"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemDoresGarganta"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemCansaco" />
+
+    <TextView
+        android:id="@+id/textViewItemTosse"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ItemTosse"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemDoresGarganta" />
+</androidx.constraintlayout.widget.ConstraintLayout>

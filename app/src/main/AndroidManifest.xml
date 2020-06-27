@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_perfil_delete"></activity>
+        <activity android:name=".activity_sintomas_delete"></activity>
+        <activity android:name=".activity_perfil_delete" />
         <activity android:name=".activity_perfil_adicionar" />
         <activity android:name=".activity_sus_inf" />
         <activity android:name=".activity_sintomas" />

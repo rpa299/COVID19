@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activity_sintomas_delete">
+
+    <TextView
+        android:id="@+id/textViewCorrimentoNasalDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCorrimentoNasalDelete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRespiracaoDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewNomeDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDataDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewDoresCabecaDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dores_de_cabeca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewDoresMuscularesDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dores_musculares"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoresCabecaDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewCansacoDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/cansaco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoresMuscularesDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewDoresGargantaDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dores_de_garganta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCansacoDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewTosseDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tosse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoresGargantaDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewTemperaturaDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/temperatura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTosseDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewRespiracaoDeleteSintoma"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/respiracao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemperaturaDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewCorrimentoNasalDelete"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/corrimento_nasal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRespiracaoDeleteSintoma" />
+
+    <TextView
+        android:id="@+id/textViewNomeDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewNomeDeleteSintoma"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDataDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDataDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewDoresCabecaDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDoresCabecaDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewDoresMuscularesDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDoresMuscularesDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoresCabecaDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewCansacoDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCansacoDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoresMuscularesDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewDoresGargantaDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDoresGargantaDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCansacoDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewTosseDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewTosseDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDoresGargantaDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewTemperaturaDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewTemperaturaDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTosseDeleteSintoma2" />
+
+    <TextView
+        android:id="@+id/textViewRespiracaoDeleteSintoma2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewRespiracaoDeleteSintoma"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemperaturaDeleteSintoma2" />
+
+    <Button
+        android:id="@+id/buttonConfirmarDeleteSintoma"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/cor_botoes"
+        android:text="@string/confirmar"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCorrimentoNasalDeleteSintoma2" />
+
+    <Button
+        android:id="@+id/buttonCancelarDeleteSintoma"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/cor_botoes"
+        android:text="@string/cancelar"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConfirmarDeleteSintoma" />
+</androidx.constraintlayout.widget.ConstraintLayout>

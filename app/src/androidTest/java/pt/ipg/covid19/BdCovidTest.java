@@ -47,7 +47,7 @@ public class BdCovidTest {
         return id;
     }
 
-    private long inserePerfil(BdTablePerfil tabelaPerfil, String nome, String dataNascimento, String sexo, int altura, float peso, String tipoSangue) {
+    private long inserePerfil(BdTablePerfil tabelaPerfil, String nome, String dataNascimento, String sexo, int altura, int peso, String tipoSangue) {
 
         Perfil perfil = new Perfil();
         perfil.setNome(nome);
@@ -63,7 +63,7 @@ public class BdCovidTest {
     //função para os sintomas
     private long insereSintoma(SQLiteDatabase bdCovid, String data, String doresCabeca, String doresMusculares, String cansaco,
                                String doresGarganta, String tosse, float temperatura, String respiracao, String corrimentoNasal,
-                               String nome, String dataNascimento, String sexo, int altura, float peso, String tipoSangue) {
+                               String nome, String dataNascimento, String sexo, int altura, int peso, String tipoSangue) {
 
         BdTablePerfil tabelaPerfil = new BdTablePerfil(bdCovid);
 
@@ -90,7 +90,7 @@ public class BdCovidTest {
 
     //função para os suspeitos ou infetados
     private long insereSusInf(SQLiteDatabase bdCovid, String nomeSusInf, String dataNascimentoSusInf, String dataInfecao,
-                               String nome, String dataNascimento, String sexo, int altura, float peso, String tipoSangue) {
+                               String nome, String dataNascimento, String sexo, int altura, int peso, String tipoSangue) {
 
         BdTablePerfil tabelaPerfil = new BdTablePerfil(bdCovid);
 
