@@ -46,8 +46,8 @@
     <string name="Yes">Yes</string>
     <string name="No">No</string>
     <string-array name="SexoPerfil">
-        <item>Masculino</item>
-        <item>Feminino</item>
+        <item>Male</item>
+        <item>Female</item>
     </string-array>
     <string-array name="SanguePerfil">
         <item>A+</item>
@@ -60,11 +60,11 @@
         <item>O-</item>
     </string-array>
     <string-array name="sintomas1">
-        <item>Não</item>
-        <item>Sim</item>
+        <item>No</item>
+        <item>Yes</item>
     </string-array>
     <string-array name="sintomas2">
         <item>Normal</item>
-        <item>Curta</item>
+        <item>Short</item>
     </string-array>
 </resources>

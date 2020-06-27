@@ -1,6 +1,8 @@
 package pt.ipg.covid19;
 
-public class Sintoma {
+import java.io.Serializable;
+
+public class Sintoma implements Serializable {
     private long id = -1;
     private String data;
     private String doresCabeca;

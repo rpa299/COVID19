@@ -79,13 +79,15 @@ public class activity_sintomas extends AppCompatActivity implements LoaderManage
         }
         else if(id == R.id.action_moreEdit) {
                 Intent intent = new Intent(this, activity_sintomas_editar.class);
-                intent.putExtra(ID_SINTOMA, adaptadorSintoma.getSintomaSelecionado().getId());
+                intent.putExtra("SintomaEdit", sintoma);
                 startActivity(intent);
+                return true;
         }
         else if(id == R.id.action_moreDelete){
                 Intent intent = new Intent(this, activity_perfil_delete.class);
                 intent.putExtra(ID_SINTOMA, adaptadorSintoma.getSintomaSelecionado().getId());
                 startActivity(intent);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

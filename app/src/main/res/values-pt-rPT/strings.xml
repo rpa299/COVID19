@@ -41,4 +41,26 @@
     <string name="Certeza">Tem a certeza que pretende eliminar?</string>
     <string name="Yes">Sim</string>
     <string name="No">Não</string>
+    <string-array name="SexoPerfil">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+    <string-array name="SanguePerfil">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="sintomas1">
+        <item>Não</item>
+        <item>Sim</item>
+    </string-array>
+    <string-array name="sintomas2">
+        <item>Normal</item>
+        <item>Curta</item>
+    </string-array>
 </resources>
