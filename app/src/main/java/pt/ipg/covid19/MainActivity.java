@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSus(View view){
-        Intent IntentSus = new Intent(this, activity_sus_inf_adicionar.class);
+        Intent IntentSus = new Intent(this, activity_sus_inf.class);
         startActivity(IntentSus);
     }
 
     public void onClickSintomas(View view){
-        Intent IntentSintomas = new Intent(this, activity_sintomas_adicionar.class);
+        Intent IntentSintomas = new Intent(this, activity_sintomas.class);
         startActivity(IntentSintomas);
     }
 }

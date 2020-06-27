@@ -1,21 +1,34 @@
 package pt.ipg.covid19;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 
 import android.app.DatePickerDialog;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
+
 import java.util.Calendar;
 
-public class activity_sintomas_adicionar extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class activity_sintomas_adicionar extends AppCompatActivity implements AdapterView.OnItemSelectedListener, LoaderManager.LoaderCallbacks<Cursor> {
+    public static final int ID_CURSOR_LOADER_SINTOMA = 0;
+    private Spinner nomePessoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +76,11 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
         adapterCorrimentoNasal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCorrimentoNasal.setAdapter(adapterCorrimentoNasal);
         spinnerCorrimentoNasal.setOnItemSelectedListener(this);
+
+        nomePessoa = (Spinner)findViewById(R.id.spinnerPessoaAddSintoma);
+        mostraDadosSpinnerPessoas(null);
+
+        LoaderManager.getInstance(this).initLoader(ID_CURSOR_LOADER_SINTOMA, null, this);
     }
 
     public void escolherData(View view){
@@ -90,8 +108,81 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
         datePickerDialog.show();
     }
 
-    public void Guardar(View view){
+    private void mostraDadosSpinnerPessoas(Cursor data) {
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(
+                this,
+                android.R.layout.simple_list_item_1,
+                data,
+                new String[]{BdTablePerfil.CAMPO_NOME},
+                new int[]{android.R.id.text1}
+        );
 
+        nomePessoa.setAdapter(adapter);
+    }
+
+    public void Guardar(View view){
+        ValidarCampos();
+    }
+
+    public void ValidarCampos(){
+        TextView mensagemDataAdd = (TextView) findViewById(R.id.textViewSintomaDataAdd);
+        Spinner spinnerDoresCabecaAdd = findViewById(R.id.spinnerDoresCabecaAdd);
+        Spinner spinnerDoresMuscularesAdd = findViewById(R.id.spinnerDoresMuscularesAdd);
+        Spinner spinnerCansacoAdd = findViewById(R.id.spinnerCansacoAdd);
+        Spinner spinnerDoresGargantaAdd = findViewById(R.id.spinnerDoresGargantaAdd);
+        Spinner spinnerTosseAdd = findViewById(R.id.spinnerTosseAdd);
+        TextInputEditText mensagemTemperaturaAdd = (TextInputEditText) findViewById(R.id.editTextTemperaturaAdd);
+        Spinner spinnerRespiracaoAdd = findViewById(R.id.spinnerRespiracaoAdd);
+        Spinner spinnerCorrimentoNasalAdd = findViewById(R.id.spinnerCorrimentoNasalAdd);
+
+        //mete os valores em strings
+        String data = mensagemDataAdd.getText().toString();
+        String doresCabeca = spinnerDoresCabecaAdd.getSelectedItem().toString();
+        String doresMusculares = spinnerDoresMuscularesAdd.getSelectedItem().toString();
+        String cansaco = spinnerCansacoAdd.getSelectedItem().toString();
+        String doresGarganta = spinnerDoresGargantaAdd.getSelectedItem().toString();
+        String tosse = spinnerTosseAdd.getSelectedItem().toString();
+        String temperatura = mensagemTemperaturaAdd.getText().toString();
+        String respiracao = spinnerRespiracaoAdd.getSelectedItem().toString();
+        String corrimentoNasal = spinnerCorrimentoNasalAdd.getSelectedItem().toString();
+        long idPessoa = nomePessoa.getSelectedItemId();
+        String pessoa = nomePessoa.getSelectedItem().toString();
+
+        Float temperaturaFloat = Float.parseFloat(temperatura);
+
+        //validação
+        if(data.trim().isEmpty()){
+            mensagemDataAdd.setError(getString(R.string.obrigatorio));
+            mensagemDataAdd.requestFocus();
+            return;
+        }
+        if(temperatura.trim().isEmpty()){
+            mensagemTemperaturaAdd.setError(getString(R.string.obrigatorio));
+            mensagemTemperaturaAdd.requestFocus();
+            return;
+        }
+
+        //guardar dados
+        Sintoma sintoma = new Sintoma();
+        sintoma.setData(data);
+        sintoma.setDoresCabeca(doresCabeca);
+        sintoma.setDoresMusculares(doresMusculares);
+        sintoma.setCansaco(cansaco);
+        sintoma.setDoresGarganta(doresGarganta);
+        sintoma.setTosse(tosse);
+        sintoma.setTemperatura(temperaturaFloat);
+        sintoma.setRespiracao(respiracao);
+        sintoma.setCorrimentoNasal(corrimentoNasal);
+        sintoma.setIdPerfil(idPessoa);
+
+        try {
+            this.getContentResolver().insert(CovidContentProvider.ENDERECO_SINTOMAS, Converte.SintomaToContentValues(sintoma));
+            Toast.makeText(this, R.string.Sucesso, Toast.LENGTH_SHORT).show();
+            finish();
+
+        } catch (Exception e) {
+            Toast.makeText(this, R.string.Erro, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void cancelar(View view){
@@ -107,5 +198,21 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @NonNull
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+        return new CursorLoader(this, CovidContentProvider.ENDERECO_PERFIL, BdTablePerfil.TODOS_CAMPOS, null, null, null);
+    }
+
+    @Override
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+        mostraDadosSpinnerPessoas(data);
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+        mostraDadosSpinnerPessoas(null);
     }
 }
