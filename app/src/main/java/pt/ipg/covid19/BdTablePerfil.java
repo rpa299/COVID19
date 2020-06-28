@@ -39,7 +39,7 @@ public class BdTablePerfil implements BaseColumns {
                 CAMPO_DATA_NASCIMENTO + " TEXT NOT NULL," +
                 CAMPO_SEXO + " TEXT NOT NULL," +
                 CAMPO_ALTURA + " INTEGER NOT NULL," +
-                CAMPO_PESO + " INTEGER NOT NULL," +
+                CAMPO_PESO + " FLOAT NOT NULL," +
                 CAMPO_TIPO_SANGUE + " TEXT NOT NULL" +
                 ")");
     }

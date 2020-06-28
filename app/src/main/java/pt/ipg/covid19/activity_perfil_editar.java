@@ -187,7 +187,7 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         String dataAlterado = mensagemDataEdit.getText().toString();
         String sexoAlterado = spinnerSexoEdit.getSelectedItem().toString();
         Integer alturaInt = Integer.parseInt(altura);
-        Integer pesoINT = Integer.parseInt(peso);
+        Float pesoFloat = Float.parseFloat(peso);
         String sangueAlterado = spinnerSangueEdit.getSelectedItem().toString();
 
         //guardar
@@ -196,7 +196,7 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         perfil.setDataNascimento(dataAlterado);
         perfil.setSexo(sexoAlterado);
         perfil.setAltura(alturaInt);
-        perfil.setPeso(pesoINT);
+        perfil.setPeso(pesoFloat);
         perfil.setTipoSangue(sangueAlterado);
 
         try {

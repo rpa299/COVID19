@@ -25,7 +25,7 @@
     <string name="corrimento_nasal">Corrimento Nasal</string>
     <string name="sexo">Sexo</string>
     <string name="altura">Altura em cm</string>
-    <string name="peso">Peso em g</string>
+    <string name="peso">Peso</string>
     <string name="tipo_de_sangue">Tipo de Sangue</string>
     <string name="data_de_nascimento">Data de Nascimento</string>
     <string name="apagar">Apagar</string>

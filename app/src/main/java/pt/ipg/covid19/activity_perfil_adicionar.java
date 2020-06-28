@@ -108,7 +108,7 @@ public class activity_perfil_adicionar extends AppCompatActivity implements Adap
         String sangue = spinnerSangue.getSelectedItem().toString();
 
         Integer alturaInt = Integer.parseInt(altura);
-        Integer pesoFloat = Integer.parseInt(peso);
+        Float pesoFloat = Float.parseFloat(peso);
 
         //validação
         if(nome.trim().isEmpty()){
