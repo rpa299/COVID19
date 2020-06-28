@@ -78,7 +78,7 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
         spinnerCorrimentoNasal.setOnItemSelectedListener(this);
 
         nomePessoa = (Spinner)findViewById(R.id.spinnerPessoaAddSintoma);
-        mostraDadosSpinnerPessoas(null);
+        getSpinnerPerfil(null);
 
         LoaderManager.getInstance(this).initLoader(ID_CURSOR_LOADER_SINTOMA, null, this);
     }
@@ -108,7 +108,7 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
         datePickerDialog.show();
     }
 
-    private void mostraDadosSpinnerPessoas(Cursor data) {
+    private void getSpinnerPerfil(Cursor data) {
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -208,11 +208,11 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
 
     @Override
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        mostraDadosSpinnerPessoas(data);
+        getSpinnerPerfil(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        mostraDadosSpinnerPessoas(null);
+        getSpinnerPerfil(null);
     }
 }

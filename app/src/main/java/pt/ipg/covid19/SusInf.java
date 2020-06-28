@@ -1,6 +1,8 @@
 package pt.ipg.covid19;
 
-public class SusInf {
+import java.io.Serializable;
+
+public class SusInf implements Serializable {
     private long id = -1;
     private String nomeSusInf;
     private String dataNascimento;
@@ -14,14 +16,6 @@ public class SusInf {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getNome() {
-        return nomeSusInf;
-    }
-
-    public void setNome(String nome) {
-        this.nomeSusInf = nome;
     }
 
     public String getDataNascimento() {

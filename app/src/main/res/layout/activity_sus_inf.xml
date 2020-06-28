@@ -9,6 +9,7 @@
     tools:context=".activity_sus_inf" >
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSusInf"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
