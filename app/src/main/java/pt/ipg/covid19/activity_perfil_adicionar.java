@@ -107,25 +107,25 @@ public class activity_perfil_adicionar extends AppCompatActivity implements Adap
         String peso = mensagemPesoAdd.getText().toString();
         String sangue = spinnerSangue.getSelectedItem().toString();
 
-        Integer alturaInt = Integer.parseInt(altura);
-        Float pesoFloat = Float.parseFloat(peso);
-
         //validação
-        if(nome.trim().isEmpty()){
+        if(nome.length() == 0){
             mensagemNomeAdd.setError(getString(R.string.obrigatorio));
             mensagemNomeAdd.requestFocus();
             return;
         }
-        if(altura.trim().isEmpty()){
+        if(altura.length() == 0){
             mensagemAlturaAdd.setError(getString(R.string.obrigatorio));
             mensagemAlturaAdd.requestFocus();
             return;
         }
-        if(peso.trim().isEmpty()){
+        if(peso.length() == 0){
             mensagemPesoAdd.setError(getString(R.string.obrigatorio));
             mensagemPesoAdd.requestFocus();
             return;
         }
+
+        Integer alturaInt = Integer.parseInt(altura);
+        Float pesoFloat = Float.parseFloat(peso);
 
         //guardar dados
         Perfil perfil = new Perfil();

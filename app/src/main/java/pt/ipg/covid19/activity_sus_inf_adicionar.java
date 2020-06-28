@@ -122,16 +122,6 @@ public class activity_sus_inf_adicionar extends AppCompatActivity implements Ada
             mensagemNomeSusInfAdd.requestFocus();
             return;
         }
-        if(dataNascimento.trim().isEmpty()){
-            mensagemDataNascimentoSusInfAdd.setError(getString(R.string.obrigatorio));
-            mensagemDataNascimentoSusInfAdd.requestFocus();
-            return;
-        }
-        if(dataInf.trim().isEmpty()){
-            mensagemDataInfSusInfAdd.setError(getString(R.string.obrigatorio));
-            mensagemDataInfSusInfAdd.requestFocus();
-            return;
-        }
 
         //guardar dados
         SusInf susInf = new SusInf();

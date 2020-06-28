@@ -8,8 +8,8 @@
     tools:context=".activity_sintomas_adicionar">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="601dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"

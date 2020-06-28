@@ -246,19 +246,14 @@ public class activity_sintomas_editar extends AppCompatActivity implements Adapt
         long idPessoa = Nomespinner.getSelectedItemId();
         String pessoa = Nomespinner.getSelectedItem().toString();
 
-        Float temperaturaFloat = Float.parseFloat(temperatura);
-
         //validação
-        if(data.trim().isEmpty()){
-            mensagemDataEdit.setError(getString(R.string.obrigatorio));
-            mensagemDataEdit.requestFocus();
-            return;
-        }
         if(temperatura.trim().isEmpty()){
             mensagemTemperaturaEdit.setError(getString(R.string.obrigatorio));
             mensagemTemperaturaEdit.requestFocus();
             return;
         }
+
+        Float temperaturaFloat = Float.parseFloat(temperatura);
 
         //guardar dados
         sintoma.setData(data);

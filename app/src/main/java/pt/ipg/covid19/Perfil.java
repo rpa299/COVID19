@@ -96,7 +96,7 @@ public class Perfil {
         int Altura = cursor.getInt(
                 cursor.getColumnIndex(BdTablePerfil.CAMPO_ALTURA)
         );
-        int Peso = cursor.getInt(
+        float Peso = cursor.getInt(
                 cursor.getColumnIndex(BdTablePerfil.CAMPO_PESO)
         );
         String TipoSangue = cursor.getString(

@@ -168,17 +168,17 @@ public class activity_perfil_editar extends AppCompatActivity implements Adapter
         String sangue = spinnerSangueEdit.getSelectedItem().toString();
 
         //validação
-        if(nome.trim().isEmpty()){
+        if(nome.length() == 0){
             mensagemNomeEdit.setError(getString(R.string.obrigatorio));
             mensagemNomeEdit.requestFocus();
             return;
         }
-        if(altura.trim().isEmpty()){
+        if(altura.length() == 0){
             mensagemAlturaEdit.setError(getString(R.string.obrigatorio));
             mensagemAlturaEdit.requestFocus();
             return;
         }
-        if(peso.trim().isEmpty()){
+        if(peso.length() == 0){
             mensagemPesoEdit.setError(getString(R.string.obrigatorio));
             mensagemPesoEdit.requestFocus();
             return;

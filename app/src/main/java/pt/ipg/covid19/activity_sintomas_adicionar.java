@@ -148,20 +148,14 @@ public class activity_sintomas_adicionar extends AppCompatActivity implements Ad
         long idPessoa = nomePessoa.getSelectedItemId();
         String pessoa = nomePessoa.getSelectedItem().toString();
 
-        Float temperaturaFloat = Float.parseFloat(temperatura);
-
         //validação
-        if(data.trim().isEmpty()){
-            mensagemDataAdd.setError(getString(R.string.obrigatorio));
-            mensagemDataAdd.requestFocus();
-            return;
-        }
         if(temperatura.trim().isEmpty()){
             mensagemTemperaturaAdd.setError(getString(R.string.obrigatorio));
             mensagemTemperaturaAdd.requestFocus();
             return;
         }
 
+        Float temperaturaFloat = Float.parseFloat(temperatura);
         //guardar dados
         Sintoma sintoma = new Sintoma();
         sintoma.setData(data);
