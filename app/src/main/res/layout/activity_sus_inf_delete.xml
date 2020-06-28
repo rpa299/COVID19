@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activity_sus_inf_delete">
+
+    <TextView
+        android:id="@+id/textViewUtilizadorSusInfDelete"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/utilizador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNomeSusInfDelete"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtilizadorSusInfDelete" />
+
+    <TextView
+        android:id="@+id/textViewDataNascimentoSusInfDelete"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/data_de_nascimento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeSusInfDelete" />
+
+    <TextView
+        android:id="@+id/textViewDataInfecaoSusInfDelete"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/data_infe_o"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataNascimentoSusInfDelete" />
+
+    <TextView
+        android:id="@+id/textViewUtilizadorSusInfDelete2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewUtilizadorSusInfDelete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNomeSusInfDelete2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewNomeSusInfDelete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtilizadorSusInfDelete2" />
+
+    <TextView
+        android:id="@+id/textViewDataNascimentoSusInfDelete2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDataNascimentoSusInfDelete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeSusInfDelete2" />
+
+    <TextView
+        android:id="@+id/textViewDataInfecaoSusInfDelete2"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDataInfecaoSusInfDelete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataNascimentoSusInfDelete2" />
+
+    <Button
+        android:id="@+id/buttonConfirmarDeleteSusInf"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/cor_botoes"
+        android:text="@string/confirmar"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataInfecaoSusInfDelete2" />
+
+    <Button
+        android:id="@+id/buttonCancelarSusInfDelete"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/cor_botoes"
+        android:text="@string/cancelar"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConfirmarDeleteSusInf" />
+</androidx.constraintlayout.widget.ConstraintLayout>

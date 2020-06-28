@@ -64,4 +64,5 @@
         <item>Normal</item>
         <item>Curta</item>
     </string-array>
+    <string name="utilizador">Utilizador</string>
 </resources>

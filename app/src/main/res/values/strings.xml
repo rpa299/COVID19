@@ -46,6 +46,7 @@
     <string name="Certeza">Are you sure you want to delete?</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
+    <string name="utilizador">Uzer</string>
     <string-array name="SexoPerfil">
         <item>Male</item>
         <item>Female</item>
